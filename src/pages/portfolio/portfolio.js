@@ -4,7 +4,7 @@ import Notion from "../../components/notion/notion";
 const Portfolio = ({ content }) => {
   return (
     <>
-      {content === "/Resume/portfolio" && (
+      {content === `${process.env.REACT_APP_PUBLIC_URL}/portfolio` && (
         <Wrapper>
           <Notion content={content} />
         </Wrapper>
