@@ -7,12 +7,12 @@ import styled from "@emotion/styled";
 function App() {
   const [isNavMode, setIsNavMode] = useState(false);
   return (
-    <Wrapper>
-      <Router>
-        <Main isNavMode={isNavMode} setIsNavMode={setIsNavMode} />
+    <Router>
+      <Wrapper>
+        <Main isnavmode={isNavMode} setIsNavMode={setIsNavMode} />
         <AnimatedRoutes />
-      </Router>
-    </Wrapper>
+      </Wrapper>
+    </Router>
   );
 }
 

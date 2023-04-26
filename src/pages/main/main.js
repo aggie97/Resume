@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
-const Main = ({ isNavMode, setIsNavMode }) => {
+const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
   const location = useLocation();
 
   useEffect(() => {
@@ -10,9 +10,9 @@ const Main = ({ isNavMode, setIsNavMode }) => {
   }, [location.pathname, setIsNavMode]);
 
   return (
-    <Wrappper isNavMode={isNavMode}>
+    <Wrappper isnavmode={isNavMode}>
       <Content>
-        <Intro isNavMode={isNavMode}>
+        <Intro isnavmode={isNavMode}>
           안녕하세요!
           <br /> 프론트 엔드 개발자 김민겸입니다.
         </Intro>
@@ -39,13 +39,15 @@ const Main = ({ isNavMode, setIsNavMode }) => {
 export default Main;
 
 const Wrappper = styled(motion.div)`
-  width: ${(props) => (props.isNavMode ? "300px" : "100%")};
+  width: ${(props) => (props.isnavmode ? "300px" : "100%")};
+
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: antiquewhite;
   transition: width 0.5s ease-in-out;
+  position: fixed;
 `;
 
 const Content = styled.div`
@@ -57,7 +59,7 @@ const Content = styled.div`
 const Intro = styled.h1`
   text-align: center;
   margin: 0;
-  font-size: ${(props) => (props.isNavMode ? "1.25rem" : "1.5rem")};
+  font-size: ${(props) => (props.isnavmode ? "1.25rem" : "1.5rem")};
   transition: font-size 0.5s ease-in-out;
 `;
 
