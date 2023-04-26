@@ -19,8 +19,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Setting .env
+      - name: Create env file
+        shell: bash
         run: |
+          touch .env
           echo "REACT_APP_PUBLIC_URL=/Resume" >> .env
           cat .env
       - name: Checkout
