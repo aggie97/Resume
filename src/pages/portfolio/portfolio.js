@@ -4,7 +4,7 @@ import Notion from "../../components/notion/notion";
 const Portfolio = ({ content }) => {
   return (
     <>
-      {content === "/portfolio" && (
+      {content === "/Resume/portfolio" && (
         <Wrapper>
           <Notion content={content} />
         </Wrapper>
