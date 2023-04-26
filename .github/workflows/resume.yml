@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Setting .env
         run: |
-          echo "REACT_APP_PUBLIC_URL=/Resume"
+          echo "REACT_APP_PUBLIC_URL=/Resume" >> .env
           cat .env
       - name: Checkout
         uses: actions/checkout@v3
