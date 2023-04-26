@@ -17,8 +17,8 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
           <br /> 프론트 엔드 개발자 김민겸입니다.
         </Intro>
         <Nav>
-          <LinkTo to="/resume">Resume</LinkTo>
-          <LinkTo to="/portfolio">Portfolio</LinkTo>
+          <LinkTo to={`${process.env.PUBLIC_URL}/resume`}>Resume</LinkTo>
+          <LinkTo to={`${process.env.PUBLIC_URL}/portfolio`}>Portfolio</LinkTo>
         </Nav>
         <Footer>
           <Link to="https://velog.io/@4ggie97" title="Blog" target="_blank">
