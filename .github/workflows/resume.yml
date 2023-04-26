@@ -17,6 +17,8 @@ concurrency:
 
 jobs:
   build:
+    env:
+      REACT_APP_PUBLIC_URL: "/Resume"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

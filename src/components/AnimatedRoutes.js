@@ -9,12 +9,15 @@ const AnimatedRoutes = () => {
   return (
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
-        <Route path={`${process.env.PUBLIC_URL}/`} element={<></>} />
+        <Route path={`${process.env.REACT_APP_PUBLIC_URL}/`} element={<></>} />
         <Route
-          path={`${process.env.PUBLIC_URL}/portfolio`}
+          path={`${process.env.REACT_APP_PUBLIC_URL}/portfolio`}
           element={<Portfolio />}
         />
-        <Route path={`${process.env.PUBLIC_URL}/resume`} element={<Resume />} />
+        <Route
+          path={`${process.env.REACT_APP_PUBLIC_URL}/resume`}
+          element={<Resume />}
+        />
       </Routes>
     </AnimatePresence>
   );

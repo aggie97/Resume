@@ -6,7 +6,9 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
   const location = useLocation();
 
   useEffect(() => {
-    setIsNavMode(() => location.pathname !== `${process.env.PUBLIC_URL}/`);
+    setIsNavMode(
+      () => location.pathname !== `${process.env.REACT_APP_PUBLIC_URL}/`
+    );
   }, [location.pathname, setIsNavMode]);
 
   return (
@@ -17,8 +19,12 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
           <br /> 프론트 엔드 개발자 김민겸입니다.
         </Intro>
         <Nav>
-          <LinkTo to={`${process.env.PUBLIC_URL}/resume`}>Resume</LinkTo>
-          <LinkTo to={`${process.env.PUBLIC_URL}/portfolio`}>Portfolio</LinkTo>
+          <LinkTo to={`${process.env.REACT_APP_PUBLIC_URL}/resume`}>
+            Resume
+          </LinkTo>
+          <LinkTo to={`${process.env.REACT_APP_PUBLIC_URL}/portfolio`}>
+            Portfolio
+          </LinkTo>
         </Nav>
         <Footer>
           <Link to="https://velog.io/@4ggie97" title="Blog" target="_blank">
