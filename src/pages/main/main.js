@@ -6,7 +6,7 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
   const location = useLocation();
 
   useEffect(() => {
-    setIsNavMode(() => location.pathname !== "/");
+    setIsNavMode(() => location.pathname !== `${process.env.PUBLIC_URL}/`);
   }, [location.pathname, setIsNavMode]);
 
   return (

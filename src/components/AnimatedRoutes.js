@@ -9,9 +9,12 @@ const AnimatedRoutes = () => {
   return (
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<></>} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/resume" element={<Resume />} />
+        <Route path={`${process.env.PUBLIC_URL}/`} element={<></>} />
+        <Route
+          path={`${process.env.PUBLIC_URL}/portfolio`}
+          element={<Portfolio />}
+        />
+        <Route path={`${process.env.PUBLIC_URL}/resume`} element={<Resume />} />
       </Routes>
     </AnimatePresence>
   );
