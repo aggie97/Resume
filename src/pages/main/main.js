@@ -69,7 +69,7 @@ const Wrappper = styled(motion.div)`
   transition: width 0.5s ease-in-out;
   position: fixed;
   box-shadow: 0 5px 15px 10px #0002;
-  background: url("/summer.jpeg");
+  background: url("Resume/summer.jpeg");
   background-position: center;
   background-size: cover;
 `;
