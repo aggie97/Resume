@@ -6,6 +6,8 @@ import { AnimatePresence } from "framer-motion";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
+  console.log(location);
+  console.log(process.env.REACT_APP_PUBLIC_URL);
 
   return (
     <AnimatePresence>

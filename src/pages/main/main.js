@@ -45,7 +45,10 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
             />
           </Icons>
           <Icons to="mailto:4ggie97@gmail.com" title="Gmail" target="_blank">
-            <img src={`/logo/gmail-logo.png`} alt="gmail" />
+            <img
+              src={`${process.env.REACT_APP_PUBLIC_URL}/logo/gmail-logo.png`}
+              alt="gmail"
+            />
           </Icons>
         </Footer>
       </Content>
@@ -66,7 +69,7 @@ const Wrappper = styled(motion.div)`
   transition: width 0.5s ease-in-out;
   position: fixed;
   box-shadow: 0 5px 15px 10px #0002;
-  background: url("/summer.jpeg");
+  background: url("./summer.jpeg");
   background-position: center;
   background-size: cover;
 `;
