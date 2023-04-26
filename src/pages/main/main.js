@@ -16,7 +16,10 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
       <Content>
         <Profile>
           <Intro isnavmode={isNavMode}>
-            <img src="/dev3d.png" alt="developer" />
+            <img
+              src={`${process.env.REACT_APP_PUBLIC_URL}/dev3d.png`}
+              alt="developer"
+            />
           </Intro>
           <h2>Aggie</h2>
         </Profile>
@@ -30,13 +33,22 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
         </Nav>
         <Footer>
           <Icons to="https://velog.io/@4ggie97" title="Blog" target="_blank">
-            <img src="/logo/symbols.png" alt="velog" />
+            <img
+              src={`${process.env.REACT_APP_PUBLIC_URL}/logo/symbols.png`}
+              alt="velog"
+            />
           </Icons>
           <Icons to="https://github.com/aggie97" title="Github" target="_blank">
-            <img src="/logo/github.png" alt="github" />
+            <img
+              src={`${process.env.REACT_APP_PUBLIC_URL}/logo/github.png`}
+              alt="github"
+            />
           </Icons>
           <Icons to="mailto:4ggie97@gmail.com" title="Gmail" target="_blank">
-            <img src="/logo/gmail-logo.png" alt="gmail" />
+            <img
+              src={`${process.env.REACT_APP_PUBLIC_URL}/logo/gmail-logo.png`}
+              alt="gmail"
+            />
           </Icons>
         </Footer>
       </Content>
