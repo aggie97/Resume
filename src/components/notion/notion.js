@@ -43,6 +43,7 @@ const Notion = () => {
               >
                 <a href="Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/KakaoTalk_Photo_2023-02-12-16-22-43-crop.jpeg">
                   <img
+                    alt={"test"}
                     style={{ width: "120px" }}
                     src="Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/KakaoTalk_Photo_2023-02-12-16-22-43-crop.jpeg"
                   />
@@ -93,6 +94,7 @@ const Notion = () => {
                   }}
                 >
                   <img
+                    alt={"test"}
                     className="icon"
                     src="Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/velogLogo.jpeg"
                   />
@@ -122,6 +124,7 @@ const Notion = () => {
                   }}
                 >
                   <img
+                    alt={"test"}
                     className="icon"
                     src="Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/%EC%BA%A1%EC%B2%98.png"
                   />
@@ -143,6 +146,7 @@ const Notion = () => {
                   }}
                 >
                   <img
+                    alt={"test"}
                     className="icon"
                     src="https://super.so/icon/dark/github.svg"
                   />
@@ -201,6 +205,7 @@ const Notion = () => {
                   }}
                 >
                   <img
+                    alt={"test"}
                     className="icon"
                     src="Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/htmlLogo.png"
                   />
@@ -254,6 +259,7 @@ const Notion = () => {
                   }}
                 >
                   <img
+                    alt={"test"}
                     className="icon"
                     src="Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/cssLogo.png"
                   />
@@ -308,6 +314,7 @@ const Notion = () => {
                   }}
                 >
                   <img
+                    alt={"test"}
                     className="icon"
                     src="Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/jsLogo.jpeg"
                   />
@@ -362,6 +369,7 @@ const Notion = () => {
                   }}
                 >
                   <img
+                    alt={"test"}
                     className="icon"
                     src="Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/typescript.png"
                   />
@@ -415,6 +423,7 @@ const Notion = () => {
                   }}
                 >
                   <img
+                    alt={"test"}
                     className="icon"
                     src="Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/reactIcon.png"
                   />
@@ -467,6 +476,7 @@ const Notion = () => {
                   }}
                 >
                   <img
+                    alt={"test"}
                     className="icon"
                     src="Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/nextjsIcon.png"
                   />
@@ -520,6 +530,7 @@ const Notion = () => {
                   }}
                 >
                   <img
+                    alt={"test"}
                     className="icon"
                     src="Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/emotionIcon.png"
                   />
@@ -564,6 +575,7 @@ const Notion = () => {
                   }}
                 >
                   <img
+                    alt={"test"}
                     // style={{ width: "3rem" }}
                     className="icon"
                     src="https://super.so/icon/dark/github.svg"
@@ -610,6 +622,7 @@ const Notion = () => {
                   }}
                 >
                   <img
+                    alt={"test"}
                     className="icon"
                     src="Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/graphQL.png"
                   />
