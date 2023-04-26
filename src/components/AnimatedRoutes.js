@@ -6,17 +6,18 @@ import { AnimatePresence } from "framer-motion";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
+
   return (
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
         <Route path={`${process.env.REACT_APP_PUBLIC_URL}/`} element={<></>} />
         <Route
           path={`${process.env.REACT_APP_PUBLIC_URL}/portfolio`}
-          element={<Portfolio />}
+          element={<Portfolio content={location.pathname} />}
         />
         <Route
           path={`${process.env.REACT_APP_PUBLIC_URL}/resume`}
-          element={<Resume />}
+          element={<Resume content={location.pathname} />}
         />
       </Routes>
     </AnimatePresence>

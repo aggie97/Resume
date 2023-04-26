@@ -1,11 +1,15 @@
 import React from "react";
 import Wrapper from "../../components/common/Wrapper";
 import Notion from "../../components/notion/notion";
-const Resume = () => {
+const Resume = ({ content }) => {
   return (
-    <Wrapper>
-      <Notion />
-    </Wrapper>
+    <>
+      {content === "/resume" && (
+        <Wrapper>
+          <Notion content={content} />
+        </Wrapper>
+      )}
+    </>
   );
 };
 
