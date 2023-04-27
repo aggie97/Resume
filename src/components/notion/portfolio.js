@@ -44,7 +44,7 @@ const Portfolio = () => {
                 style={{ textAlign: "left" }}
               >
                 <a href="%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%20ad1c53025a474abe8b60f6ab44c9b859/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-01-17_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.58.17.png">
-                  <img style={{ width: "384px" }} src={`./onoff1.png`} alt="" />
+                  <img style={{ width: "25rem" }} src={`./onoff1.png`} alt="" />
                 </a>
               </figure>
             </div>
@@ -58,7 +58,7 @@ const Portfolio = () => {
                 className="image"
               >
                 <a href="%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%20ad1c53025a474abe8b60f6ab44c9b859/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-01-17_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.00.10.png">
-                  <img style={{ width: "336px" }} src={`./onoff2.png`} alt="" />
+                  <img style={{ width: "25rem" }} src={`./onoff2.png`} alt="" />
                 </a>
               </figure>
             </div>
@@ -322,16 +322,17 @@ const Portfolio = () => {
             </figure>
           </ul>
           <ul>
-            <p id="7881df71-1f85-4b67-815c-b8e334b906f1" className=""></p>
-            <p id="046ca147-393d-4252-a826-5c62eac3b1d8" className="">
-              <strong>회고</strong>
-            </p>
             <li>
-              <figure id="84cd9317-7f7b-4673-a3ed-c3ecd679426c">
-                <a href="https://velog.io/@4ggie97/4%EC%A3%BC-%EB%8F%99%EC%95%88%EC%9D%98-%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0">
-                  velog 회고록
-                </a>
-              </figure>
+              <strong>회고</strong>
+              <ul>
+                <li style={{ listStyleType: "circle" }}>
+                  <figure id="84cd9317-7f7b-4673-a3ed-c3ecd679426c">
+                    <a href="https://velog.io/@4ggie97/4%EC%A3%BC-%EB%8F%99%EC%95%88%EC%9D%98-%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0">
+                      velog 회고록 링크
+                    </a>
+                  </figure>
+                </li>
+              </ul>
             </li>
           </ul>
           <p id="804dde86-a33a-44c3-bec5-78cd414f094b" className=""></p>
@@ -347,7 +348,9 @@ const Portfolio = () => {
             클론한 중고 마켓 + 자유 게시판입니다.
           </p>
           <figure id="37e1a2bd-3276-462e-bf6f-19f9c9b25f44">
-            <div className="source">https://github.com/aggie97/used_market</div>
+            <a href="https://github.com/aggie97/used_market">
+              중고 마켓 클라이언트 레포
+            </a>
           </figure>
           <h3 id="4941ac6f-1c43-43dd-ace2-2045c25aaf2a" className="">
             Skill Stack

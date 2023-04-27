@@ -60,18 +60,24 @@ export default Main;
 
 const Wrappper = styled(motion.div)`
   width: ${(props) => (props.isnavmode ? "300px" : "100%")};
-
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: antiquewhite;
-  transition: width 0.5s ease-in-out;
   position: fixed;
   box-shadow: 0 5px 15px 10px #0002;
   background: url("./summer.jpeg");
   background-position: center;
   background-size: cover;
+  @media (max-width: 859px) {
+    width: ${(props) => (props.isnavmode ? "0px" : "100%")};
+
+    > div {
+      opacity: ${(props) => (props.isnavmode ? 0 : 1)};
+    }
+  }
+  transition: all 0.5s ease;
 `;
 
 const Content = styled.div`
