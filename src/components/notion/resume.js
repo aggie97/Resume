@@ -1,5 +1,5 @@
 import React from "react";
-import "./notion.css";
+
 const Resume = () => {
   return (
     <div>
@@ -10,7 +10,7 @@ const Resume = () => {
       <div id="bd2541d5-de67-4a6b-b006-4ed59d7f32ac" className="column-list">
         <div
           id="f878198f-0152-4db6-b025-cf6f5ab56e79"
-          style={{ width: "81.25%" }}
+          style={{ width: "80%" }}
           className="column"
         >
           <h3 id="6821b454-3916-499d-b03b-0c49e8b284b9" className="">
@@ -28,7 +28,7 @@ const Resume = () => {
         </div>
         <div
           id="aa6de163-fd60-4197-9422-24482ca247d3"
-          style={{ width: "18.750000000000004%" }}
+          style={{ width: "20%" }}
           className="column"
         >
           <figure id="cc598b2e-ac1e-49ea-9ea4-770a8c7a9237" className="image">
@@ -58,7 +58,6 @@ const Resume = () => {
           >
             <div
               style={{
-                fontSize: "1.5rem",
                 width: "1.5rem",
                 aspectRatio: "1 / 1",
               }}
@@ -76,7 +75,6 @@ const Resume = () => {
           >
             <div
               style={{
-                fontSize: "1.5rem",
                 width: "1.5rem",
                 aspectRatio: "1 / 1",
               }}
@@ -104,7 +102,6 @@ const Resume = () => {
           >
             <div
               style={{
-                fontSize: "1.5rem",
                 width: "1.5rem",
                 aspectRatio: "1 / 1",
               }}
@@ -126,7 +123,6 @@ const Resume = () => {
           >
             <div
               style={{
-                fontSize: "1.5rem",
                 width: "1.5rem",
                 aspectRatio: "1 / 1",
               }}
@@ -163,8 +159,8 @@ const Resume = () => {
         캠프(코드 캠프 프론트 엔드 9기)에 참여하게 되었습니다.
       </p>
       <p id="211fc6d8-0693-4469-a677-1a3da43336e0" className="">
-        현재는 수료생들과 책을 주제로 스터디를 진행하면서 JavaScript 심화 학습
-        중이며, 토이 프로젝트를 진행할 예정입니다.
+        현재는 JavaScript 심화 학습을 위해 수료생들과 책을 주제로 스터디를
+        진행하고 있습니다.
       </p>
       <h1 id="f90425a4-2915-47a3-aa55-24431a221221" className="">
         <mark>Skills </mark>
@@ -182,7 +178,7 @@ const Resume = () => {
           >
             <div
               style={{
-                fontSize: "1.5em",
+                textAlign: "center",
                 width: "6rem",
                 aspectRatio: "1 / 1",
               }}
@@ -196,6 +192,7 @@ const Resume = () => {
                   />
                 </a>
               </p>
+              <span>HTML</span>
             </div>
             <div
               id="7db81039-33bb-4c3f-95fa-7a6ac572ce25"
@@ -236,7 +233,7 @@ const Resume = () => {
           >
             <div
               style={{
-                fontSize: "1.5em",
+                textAlign: "center",
                 width: "6rem",
                 aspectRatio: "1 / 1",
               }}
@@ -250,6 +247,7 @@ const Resume = () => {
                   />
                 </a>
               </p>
+              <span>CSS</span>
             </div>
             <div
               id="1e37b4f6-68e8-4b88-b920-7cd9be4978af"
@@ -291,7 +289,7 @@ const Resume = () => {
           >
             <div
               style={{
-                fontSize: "1.5em",
+                textAlign: "center",
                 width: "6rem",
                 aspectRatio: "1 / 1",
               }}
@@ -305,6 +303,7 @@ const Resume = () => {
                   />
                 </a>
               </p>
+              <span>JavaScript</span>
             </div>
             <div
               id="d009bce1-f80d-4901-a2c5-fabfa6a28416"
@@ -346,7 +345,7 @@ const Resume = () => {
           >
             <div
               style={{
-                fontSize: "1.5em",
+                textAlign: "center",
                 width: "6rem",
                 aspectRatio: "1 / 1",
               }}
@@ -360,6 +359,7 @@ const Resume = () => {
                   />
                 </a>
               </p>
+              <span>TypeScript</span>
             </div>
             <div
               id="6f1745e8-0c40-4cff-af29-a8d237ec4101"
@@ -400,7 +400,7 @@ const Resume = () => {
           >
             <div
               style={{
-                fontSize: "1.5em",
+                textAlign: "center",
                 width: "6rem",
                 aspectRatio: "1 / 1",
               }}
@@ -416,6 +416,7 @@ const Resume = () => {
                   />
                 </a>
               </p>
+              <span>React</span>
             </div>
             <div
               id="0eb0f441-877a-47df-9087-8f8ad2087554"
@@ -456,7 +457,7 @@ const Resume = () => {
           >
             <div
               style={{
-                fontSize: "1.5em",
+                textAlign: "center",
                 width: "6rem",
                 aspectRatio: "1 / 1",
               }}
@@ -470,6 +471,7 @@ const Resume = () => {
                   />
                 </a>
               </p>
+              <span>Next.js</span>
             </div>
             <div
               id="a2a02974-b120-4176-8b0a-0fc4b9f87708"
@@ -511,7 +513,7 @@ const Resume = () => {
           >
             <div
               style={{
-                fontSize: "1.5em",
+                textAlign: "center",
                 width: "6rem",
                 aspectRatio: "1 / 1",
               }}
@@ -525,6 +527,7 @@ const Resume = () => {
                   />
                 </a>
               </p>
+              <span>Emotion</span>
             </div>
             <div
               id="631c968b-70f6-4dfa-b46e-e0bd4e0760d5"
@@ -536,8 +539,17 @@ const Resume = () => {
                 className="bulleted-list"
               >
                 <li style={{ listStyleType: "disc" }}>
-                  동적인 스타일링 적용이 간편하고 React와 잘 맞아서 사용하고
+                  동적인 스타일링 적용이 간편하고 Next.js와 잘 맞아서 사용하고
                   있습니다.
+                </li>
+              </ul>
+              <ul
+                id="b004f590-303a-4a2f-aecc-5db883234a4f"
+                className="bulleted-list"
+              >
+                <li style={{ listStyleType: "disc" }}>
+                  컴포넌트 단위의 스타일 정의를 하고 css props를 이용한 유동적인
+                  스타일링을 할 때 사용합니다.
                 </li>
               </ul>
             </div>
@@ -557,7 +569,7 @@ const Resume = () => {
           >
             <div
               style={{
-                fontSize: "3em",
+                textAlign: "center",
                 width: "6rem",
                 aspectRatio: "1 / 1",
               }}
@@ -571,6 +583,7 @@ const Resume = () => {
                   />
                 </a>
               </p>
+              <span>Git</span>
             </div>
             <div
               id="5e5e9653-ca84-42d6-91d1-b2e5967740f8"
@@ -604,7 +617,7 @@ const Resume = () => {
           >
             <div
               style={{
-                fontSize: "1.5em",
+                textAlign: "center",
                 width: "6rem",
                 aspectRatio: "1 / 1",
               }}
@@ -618,6 +631,7 @@ const Resume = () => {
                   />
                 </a>
               </p>
+              <span>GraphQL</span>
             </div>
             <div
               id="edfa7884-bc1a-4cb5-b59b-16f7af9d9434"
@@ -654,7 +668,6 @@ const Resume = () => {
         id="8ba98b32-bfcc-467b-94d6-531b2fca30f9"
         className="collection-content"
       >
-        <h4 className="collection-title">🧑‍🎓교육 및 학력 사항</h4>
         <table className="collection-content">
           <thead>
             <tr>

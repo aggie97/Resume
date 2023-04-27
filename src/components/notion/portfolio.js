@@ -1,5 +1,5 @@
 import React from "react";
-import "./notion.css";
+
 const Portfolio = () => {
   return (
     <div>
@@ -314,7 +314,12 @@ const Portfolio = () => {
             >
               <a href="%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%20ad1c53025a474abe8b60f6ab44c9b859/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-01-16_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_11.54.57.png">
                 <img
-                  style={{ maxWidth: "40rem" }}
+                  style={{
+                    maxWidth: "40rem",
+                    width: "100%",
+
+                    paddingLeft: "1rem",
+                  }}
                   src={`./%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%20ad1c53025a474abe8b60f6ab44c9b859/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-01-16_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_11.54.57.png`}
                   alt=""
                 />
@@ -404,6 +409,19 @@ const Portfolio = () => {
               최상단에서 아래로 스크롤 시, sticky 장바구니 목록
               표시(Intersection-Observer)
             </li>
+          </ul>
+          <h3>What I Learned</h3>
+          <ul
+            style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}
+          >
+            <li>Next.js 작동 원리</li>
+            <li>Emotion을 쓰는 이유</li>
+            <li>Context API, Recoil를 활용한 전역 상태 관리</li>
+            <li>GraphQL과 Apollo-Client의 사용법</li>
+            <li>TypeScript를 사용하는 이유</li>
+            <li>JavaScript의 비동기 처리</li>
+            <li>Critical Rendering Path 방지법</li>
+            <li>XSS, CSRF의 정의와 대응 방안</li>
           </ul>
           <p id="66b1027f-eecd-44aa-943d-943bfbd4df9f" className=""></p>
         </div>

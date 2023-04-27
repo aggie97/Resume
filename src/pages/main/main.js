@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
+import { css } from "@emotion/react";
 const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
   const location = useLocation();
-
+  const navigator = useNavigate();
   useEffect(() => {
     setIsNavMode(
       () => location.pathname !== `${process.env.REACT_APP_PUBLIC_URL}/`
@@ -14,20 +15,30 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
   return (
     <Wrappper isnavmode={isNavMode}>
       <Content>
-        <Profile>
+        <Profile isnavmode={isNavMode}>
           <Intro isnavmode={isNavMode}>
             <img
               src={`${process.env.REACT_APP_PUBLIC_URL}/dev3d.png`}
               alt="developer"
             />
           </Intro>
-          <h2>Aggie</h2>
+          <h3 onClick={() => navigator(`${process.env.REACT_APP_PUBLIC_URL}/`)}>
+            Maybe{`<Aggie>`}
+          </h3>
         </Profile>
         <Nav>
-          <LinkTo to={`${process.env.REACT_APP_PUBLIC_URL}/resume`}>
+          <LinkTo
+            onClick={() => {
+              navigator(`${process.env.REACT_APP_PUBLIC_URL}/resume`);
+            }}
+          >
             Resume
           </LinkTo>
-          <LinkTo to={`${process.env.REACT_APP_PUBLIC_URL}/portfolio`}>
+          <LinkTo
+            onClick={() => {
+              navigator(`${process.env.REACT_APP_PUBLIC_URL}/portfolio`);
+            }}
+          >
             Portfolio
           </LinkTo>
         </Nav>
@@ -60,7 +71,7 @@ export default Main;
 
 const Wrappper = styled(motion.div)`
   width: ${(props) => (props.isnavmode ? "300px" : "100%")};
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,6 +89,7 @@ const Wrappper = styled(motion.div)`
     }
   }
   transition: all 0.5s ease;
+  transition-delay: ${({ isnavmode }) => (isnavmode ? "0" : "0.5s")};
 `;
 
 const Content = styled.div`
@@ -87,15 +99,31 @@ const Content = styled.div`
   background-color: #2228;
   border-radius: 1.5rem;
   padding: 3rem 1rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const Profile = styled.div`
-  h2 {
+  h3 {
     text-align: center;
     margin: 0;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
+    :hover {
+      ${({ isnavmode }) =>
+        isnavmode
+          ? css`
+              cursor: pointer;
+              text-decoration: underline;
+            `
+          : css`
+              cursor: default;
+            `}
+    }
   }
 `;
 
@@ -114,13 +142,15 @@ const Nav = styled.nav`
   justify-content: space-between;
 `;
 
-const LinkTo = styled(Link)`
-  padding: 0.75rem 1.25rem;
+const LinkTo = styled.button`
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: transparent;
   border-radius: 0.5rem;
   font-size: 1.5em;
   text-decoration: none;
   color: #fff;
-
+  cursor: pointer;
   :hover {
     text-decoration: underline;
   }

@@ -3,9 +3,13 @@ import Wrapper from "../../components/common/Wrapper";
 import Notion from "../../components/notion/notion";
 const Resume = ({ content }) => {
   return (
-    <Wrapper>
-      <Notion content={content} />
-    </Wrapper>
+    <>
+      {content === `${process.env.REACT_APP_PUBLIC_URL}/resume` && (
+        <Wrapper>
+          <Notion content={content} />
+        </Wrapper>
+      )}
+    </>
   );
 };
 
