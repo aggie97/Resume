@@ -11,15 +11,15 @@ const Container = styled(motion.div)`
   @media (max-width: 1029px) {
     max-width: 100%;
     padding-left: 20rem;
-    transition: all 0.5s ease;
+    transition: padding 0.5s ease;
   }
 
   @media (max-width: 859px) {
     margin: 0.5rem;
     padding: 1.5rem;
-    transition: all 0.5s ease;
+    transition: padding 0.5s ease;
   }
-  transition: all 0.5s ease;
+  transition: padding 0.5s ease;
 `;
 
 const Wrapper = ({ children }) => {
