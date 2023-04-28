@@ -5,76 +5,65 @@ const Portfolio = () => {
     <div>
       <article id="ad1c5302-5a47-4abe-8b60-f6ab44c9b859" className="page sans">
         <header>
-          <h1 className="page-title">포트폴리오</h1>
+          <h1 className="page-title">Portfolio</h1>
         </header>
         <hr />
         <div className="page-body">
-          <h3 id="cdd16dde-cac3-4d78-8033-6a27f7081d41" className="">
+          <h3 id="cdd16dde-cac3-4d78-8033-6a27f7081d41">
             <span style={{ borderBottom: "0.05em solid" }}>
               <strong>ONF(On And Off)</strong>
             </span>
             <strong> : </strong>
             <mark className="highlight-gray">Team Project</mark>
           </h3>
-          <p id="54656f97-32b1-4420-a61c-6ce76c800c44" className="">
+          <p id="54656f97-32b1-4420-a61c-6ce76c800c44">
             근태관리 솔루션 Shiftee 클론 사이드 프로젝트
           </p>
           <figure id="1ed518b6-13f9-4528-a7f1-e1e5aa912f34">
             <a href="https://github.com/Dev-One-Project/ONF-client" alt="">
-              프로젝트 Github Client Repo 링크
+              ONF Github Client Repo 링크
             </a>
           </figure>
-          <p id="d115ec2f-c5b3-4458-822c-10c98ceefc61" className="">
+          <p id="d115ec2f-c5b3-4458-822c-10c98ceefc61">
             <mark className="highlight-gray">
               2022.11.28 ~ 2023.01.27(1차 마무리)
             </mark>
           </p>
           <div
             id="d329cbd4-6890-468d-b3ba-27b6ac6c229f"
-            className="column-list"
+            className="onoffImages"
           >
             <div
               id="6665a18d-b396-4dba-bd0b-13c2e014da0e"
-              style={{ width: "50%" }}
+              style={{ maxWidth: "100%" }}
               className="column"
             >
-              <figure
-                id="8cf3a349-a7c8-4573-886c-2679e0d14fa4"
-                className="image"
-                style={{ textAlign: "left" }}
-              >
-                <a href="%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%20ad1c53025a474abe8b60f6ab44c9b859/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-01-17_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.58.17.png">
-                  <img style={{ width: "25rem" }} src={`./onoff1.png`} alt="" />
-                </a>
-              </figure>
+              <img
+                style={{ width: "100%", height: "100%" }}
+                src={`./onoff1.png`}
+                alt=""
+              />
             </div>
             <div
               id="bbd08297-2693-4d9b-9d40-06d826b68909"
-              style={{ width: "50%" }}
+              style={{ maxWidth: "100%" }}
               className="column"
             >
-              <figure
-                id="7d4fa18e-fc1b-42e0-8274-46329199da9f"
-                className="image"
-              >
-                <a href="%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%20ad1c53025a474abe8b60f6ab44c9b859/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-01-17_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.00.10.png">
-                  <img style={{ width: "25rem" }} src={`./onoff2.png`} alt="" />
-                </a>
-              </figure>
+              <img
+                style={{ width: "100%", height: "100%" }}
+                src={`./onoff2.png`}
+                alt=""
+              />
             </div>
           </div>
-          <h3 id="8eefd8a0-c78c-4164-bafe-c4e3e6f16465" className="">
-            Skill Stack
-          </h3>
-          <p id="15636c55-a977-4192-83b8-748071608662" className="">
+          <h3 id="8eefd8a0-c78c-4164-bafe-c4e3e6f16465">Skill Stack</h3>
+          <p id="15636c55-a977-4192-83b8-748071608662">
             <code>React</code>, <code>TypeScript</code>, <code>Next.js</code>,
             <code>Emotion</code>, <code>GraphQL</code>,
             <code>Apollo-Client</code>, <code>Recoil</code>
           </p>
-          <h3 id="156b264d-ea09-4c27-bc14-c972be0d31dd" className="">
-            What I Did
-          </h3>
-          <p id="72b34aaf-a867-454d-bce4-10bc1aec22af" className="">
+          <h3 id="156b264d-ea09-4c27-bc14-c972be0d31dd">What I Did</h3>
+          <p id="72b34aaf-a867-454d-bce4-10bc1aec22af">
             <strong>관리, 프로필 페이지</strong>
           </p>
           <ul
@@ -117,7 +106,7 @@ const Portfolio = () => {
               Container-Presenter 패턴에 Atomic 패턴을 섞어 유지 보수 개선
             </li>
           </ul>
-          <p id="d819b3a5-2572-4ea6-8bc0-76d8abc76bee" className="">
+          <p id="d819b3a5-2572-4ea6-8bc0-76d8abc76bee">
             <strong>핵심 공통 컴포넌트 설계 및 구현</strong>
           </p>
           <ul
@@ -136,28 +125,38 @@ const Portfolio = () => {
               </ul>
             </li>
           </ul>
-          <p id="2ee23611-e55b-46db-9fae-edb343ac2d0f" className=""></p>
-          <p id="61a0edb8-5f4e-49c6-95d2-41e78eff4db8" className=""></p>
-          <p id="f43f49ee-9c01-4d59-9281-b3034b8bdd5c" className=""></p>
-          <h2 id="4705c22c-66e4-409e-80cb-e75e84193953" className="">
+          <p id="2ee23611-e55b-46db-9fae-edb343ac2d0f"></p>
+          <p id="61a0edb8-5f4e-49c6-95d2-41e78eff4db8"></p>
+          <p id="f43f49ee-9c01-4d59-9281-b3034b8bdd5c"></p>
+          <hr id="6108bd47-e6b8-4251-ab14-a8195fffb9e9" />
+          <h2 id="4705c22c-66e4-409e-80cb-e75e84193953">
             <span style={{ borderBottom: "0.05em solid" }}>BUSKER</span> :
             <mark className="highlight-gray">Team Project</mark>
           </h2>
-          <hr id="6108bd47-e6b8-4251-ab14-a8195fffb9e9" />
-          <p id="59a39d5e-5250-4b01-8537-c4bddf5126ad" className="">
+          <p id="59a39d5e-5250-4b01-8537-c4bddf5126ad">
             버스커와 버스킹을 즐기는 관객들을 이어주는 버스킹 위치 정보 제공
             플랫폼.
           </p>
-          <p id="7f1aec68-81e5-4440-a10a-d72e46a315f8" className="">
+          <p id="7f1aec68-81e5-4440-a10a-d72e46a315f8">
             부트 캠프에서 4주 동안 총 6 명의 팀원이 함께 만든 프로젝트로 기획,
             디자인, 개발을 분배하여 진행.
           </p>
           <figure
-            className="block-color-purple_background callout"
-            style={{ whiteSpace: "pre-wrap", display: "flex" }}
+            className="callout"
+            style={{
+              whiteSpace: "pre-wrap",
+              display: "flex",
+            }}
             id="ebc77647-42c9-4ac1-a076-8d3eeefd476d"
           >
-            <div style={{ fontSize: "1.5em" }}>
+            <div
+              style={{
+                fontSize: "1.5em",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <span className="icon">💡</span>
             </div>
             <p style={{ width: "100%" }}>
@@ -166,17 +165,13 @@ const Portfolio = () => {
               참조해주시기 바랍니다.
             </p>
           </figure>
-          <h3 id="a0e3858d-add2-4aac-922e-f9381dfd03c9" className="">
-            Skill Stack
-          </h3>
-          <p id="175289b0-1b64-405c-89a4-0b1de3af4268" className="">
+          <h3 id="a0e3858d-add2-4aac-922e-f9381dfd03c9">Skill Stack</h3>
+          <p id="175289b0-1b64-405c-89a4-0b1de3af4268">
             <code>React</code>, <code>TypeScript</code>, <code>Next.js</code>,
             <code>Emotion</code>, <code>GraphQL</code>, <code>Recoil</code>
           </p>
-          <p id="82c9ef1b-3cb6-4e6e-a14a-c1529ebf7548" className=""></p>
-          <h3 id="0820383a-59ce-40ed-a309-a4f34d7e6494" className="">
-            What I Did
-          </h3>
+          <p id="82c9ef1b-3cb6-4e6e-a14a-c1529ebf7548"></p>
+          <h3 id="0820383a-59ce-40ed-a309-a4f34d7e6494">What I Did</h3>
           <ul
             id="c973cf73-ba3d-451b-a4ba-3671b2aa1c83"
             className="bulleted-list"
@@ -340,34 +335,30 @@ const Portfolio = () => {
               </ul>
             </li>
           </ul>
-          <p id="804dde86-a33a-44c3-bec5-78cd414f094b" className=""></p>
-          <p id="8cf0f9c7-efe7-487a-b821-a8a670be747e" className=""></p>
-          <h2 id="f3284635-19ca-4229-b2ac-00049e1c08fb" className="">
+          <p id="804dde86-a33a-44c3-bec5-78cd414f094b"></p>
+          <p id="8cf0f9c7-efe7-487a-b821-a8a670be747e"></p>
+          <hr id="d79fad9b-36a2-4e47-bb29-3e66986e7a11" />
+          <h2 id="f3284635-19ca-4229-b2ac-00049e1c08fb">
             <span style={{ borderBottom: "0.05em solid" }}>중고마켓</span> :
             <mark className="highlight-gray">Personal Project</mark>
           </h2>
-          <hr id="d79fad9b-36a2-4e47-bb29-3e66986e7a11" />
-          <p id="17c93db2-8eb0-4866-a518-54d90a4571a9" className="">
+          <p id="17c93db2-8eb0-4866-a518-54d90a4571a9">
             부트 캠프에서 8주 동안 학습을 병행하며 만들었던 간단한 문의 게시판
             CRUD 기능과 중고 상품 CRUD 기능을 가진 11번가, 에어비앤비 디자인을
             클론한 중고 마켓 + 자유 게시판입니다.
           </p>
           <figure id="37e1a2bd-3276-462e-bf6f-19f9c9b25f44">
             <a href="https://github.com/aggie97/used_market">
-              중고 마켓 클라이언트 레포
+              usedMarket Github Client Repo 링크
             </a>
           </figure>
-          <h3 id="4941ac6f-1c43-43dd-ace2-2045c25aaf2a" className="">
-            Skill Stack
-          </h3>
-          <p id="88416aef-7b75-4d9f-9202-a88b1b58cd6e" className="">
+          <h3 id="4941ac6f-1c43-43dd-ace2-2045c25aaf2a">Skill Stack</h3>
+          <p id="88416aef-7b75-4d9f-9202-a88b1b58cd6e">
             <code>React</code>, <code>TypeScript</code>, <code>Next.js</code>,
             <code>Emotion</code>, <code>GraphQL</code>, <code>Recoil</code>
           </p>
-          <p id="f4d0bd43-0193-441b-b18b-760c3833c6b6" className=""></p>
-          <h3 id="d4fd5a6c-d45d-4e20-b5bc-fe2741b3f76a" className="">
-            What I Did
-          </h3>
+          <p id="f4d0bd43-0193-441b-b18b-760c3833c6b6"></p>
+          <h3 id="d4fd5a6c-d45d-4e20-b5bc-fe2741b3f76a">What I Did</h3>
           <ul
             id="c70287f1-d934-4774-b4d9-c6984c50a85e"
             className="bulleted-list"
@@ -423,7 +414,7 @@ const Portfolio = () => {
             <li>Critical Rendering Path 방지법</li>
             <li>XSS, CSRF의 정의와 대응 방안</li>
           </ul>
-          <p id="66b1027f-eecd-44aa-943d-943bfbd4df9f" className=""></p>
+          <p id="66b1027f-eecd-44aa-943d-943bfbd4df9f"></p>
         </div>
       </article>
     </div>

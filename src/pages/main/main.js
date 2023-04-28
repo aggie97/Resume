@@ -3,17 +3,25 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { css } from "@emotion/react";
+import { useDarkMode } from "../../App";
+
 const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
   const location = useLocation();
   const navigator = useNavigate();
+  const [isDarkMode, toggleMode] = useDarkMode();
+
   useEffect(() => {
     setIsNavMode(
       () => location.pathname !== `${process.env.REACT_APP_PUBLIC_URL}/`
     );
   }, [location.pathname, setIsNavMode]);
 
+  const toggleDarkMode = () => {
+    toggleMode((prev) => !prev);
+  };
+
   return (
-    <Wrappper isnavmode={isNavMode}>
+    <Wrappper isDarkMode={isDarkMode} isnavmode={isNavMode}>
       <Content>
         <Profile isnavmode={isNavMode}>
           <Intro isnavmode={isNavMode}>
@@ -22,9 +30,11 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
               alt="developer"
             />
           </Intro>
-          <h3 onClick={() => navigator(`${process.env.REACT_APP_PUBLIC_URL}/`)}>
-            Maybe{`<Aggie>`}
-          </h3>
+          <button
+            onClick={() => navigator(`${process.env.REACT_APP_PUBLIC_URL}/`)}
+          >
+            Aggie
+          </button>
         </Profile>
         <Nav>
           <LinkTo
@@ -63,6 +73,25 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
           </Icons>
         </Footer>
       </Content>
+      <ToggleDarkMode
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ delay: 1 }}
+        onClick={toggleDarkMode}
+      >
+        {isDarkMode ? (
+          <img
+            src={`${process.env.REACT_APP_PUBLIC_URL}${"/sun.png"}`}
+            alt="darkmode"
+          />
+        ) : (
+          <img
+            src={`${process.env.REACT_APP_PUBLIC_URL}${"/moon.png"}`}
+            alt="darkmode"
+          />
+        )}
+      </ToggleDarkMode>
     </Wrappper>
   );
 };
@@ -75,21 +104,49 @@ const Wrappper = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: antiquewhite;
   position: fixed;
   box-shadow: 0 5px 15px 10px #0002;
-  background: url("./summer.jpeg");
+  ${(props) =>
+    props.isDarkMode
+      ? css`
+          background: url("./summer-dark.jpeg");
+        `
+      : css`
+          background: url("./summer.jpeg");
+        `};
   background-position: center;
   background-size: cover;
   @media (max-width: 859px) {
     width: ${(props) => (props.isnavmode ? "0px" : "100%")};
-
     > div {
-      opacity: ${(props) => (props.isnavmode ? 0 : 1)};
+      opacity: ${(props) => (props.isnavmode ? "0" : "1")};
+      transition: opacity ${(props) => (props.isnavmode ? "0.1s" : "0.5s")} ease
+        ${(props) => props.isnavmode || "0.5s"};
     }
   }
-  transition: all 0.5s ease;
-  transition-delay: ${({ isnavmode }) => (isnavmode ? "0" : "0.5s")};
+  transition: width 0.5s ease, background 0.5s ease;
+
+  z-index: 999;
+`;
+
+const ToggleDarkMode = styled(motion.div)`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  :hover {
+    background-color: rgba(124, 124, 124, 0.5);
+  }
+  transition: all 0.2s ease;
+
+  img {
+    width: 2rem;
+    height: 2rem;
+    transition: all 0.3s ease;
+  }
 `;
 
 const Content = styled.div`
@@ -107,11 +164,12 @@ const Content = styled.div`
 `;
 
 const Profile = styled.div`
-  h3 {
-    text-align: center;
-    margin: 0;
+  text-align: center;
+  button {
+    background-color: transparent;
+    border: none;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
     :hover {
       ${({ isnavmode }) =>
@@ -167,6 +225,6 @@ const Icons = styled(Link)`
   width: 3rem;
   padding: 0.5rem;
   :hover {
-    background-color: #2221;
+    background-color: rgba(255, 255, 255, 0.3);
   }
 `;
