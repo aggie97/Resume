@@ -146,6 +146,7 @@ const Portfolio = () => {
             style={{
               whiteSpace: "pre-wrap",
               display: "flex",
+              alignItems: "center",
             }}
             id="ebc77647-42c9-4ac1-a076-8d3eeefd476d"
           >
@@ -155,9 +156,12 @@ const Portfolio = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                margin: "0.5rem",
               }}
             >
-              <span className="icon">💡</span>
+              <span className="icon" style={{ margin: "0" }}>
+                💡
+              </span>
             </div>
             <p style={{ width: "100%" }}>
               프로젝트 전체 소개는

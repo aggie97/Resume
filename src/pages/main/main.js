@@ -92,6 +92,13 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
           />
         )}
       </ToggleDarkMode>
+      <img
+        style={{ display: "none" }}
+        src={`${process.env.REACT_APP_PUBLIC_URL}${
+          isDarkMode ? "/summer.jpeg" : "/summer-dark.jpeg"
+        }`}
+        alt="reverse-prefer-color"
+      />
     </Wrappper>
   );
 };
@@ -114,8 +121,10 @@ const Wrappper = styled(motion.div)`
       : css`
           background: url("./summer.jpeg");
         `};
+
   background-position: center;
   background-size: cover;
+
   @media (max-width: 859px) {
     width: ${(props) => (props.isnavmode ? "0px" : "100%")};
     > div {
@@ -125,8 +134,6 @@ const Wrappper = styled(motion.div)`
     }
   }
   transition: width 0.5s ease, background 0.5s ease;
-
-  z-index: 999;
 `;
 
 const ToggleDarkMode = styled(motion.div)`

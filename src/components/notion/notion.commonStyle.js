@@ -64,6 +64,10 @@ export const Wrapper = styled.div`
   .callout {
     border-radius: 3px;
     padding: 1rem;
+
+    :nth-of-type(-n + 4) {
+      margin-bottom: 0;
+    }
   }
 
   figure {
@@ -126,9 +130,14 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     @media (max-width: 768px) {
-      img {
-        /* max-width: 5rem; */
-        float: right;
+      :nth-of-type(1) {
+        gap: 0.5rem;
+        .column {
+          display: inline;
+        }
+        img {
+          float: right;
+        }
       }
     }
     img {
@@ -323,8 +332,8 @@ export const Wrapper = styled.div`
 
   .icon {
     display: inline-block;
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
     vertical-align: text-bottom;
     margin-right: 0.5em;

@@ -48,7 +48,11 @@ const Resume = () => {
         >
           <figure
             className="callout"
-            style={{ whiteSpace: "pre-wrap", display: "flex", gap: "1rem" }}
+            style={{
+              whiteSpace: "pre-wrap",
+              display: "flex",
+              gap: "1rem",
+            }}
             id="a8ef0e8e-fa00-4131-b600-95f3aeb93500"
           >
             <div
@@ -197,7 +201,7 @@ const Resume = () => {
             </div>
             <div
               id="7db81039-33bb-4c3f-95fa-7a6ac572ce25"
-              style={{ width: "75%" }}
+              style={{ width: "100%" }}
               className="column"
             >
               <ul
@@ -254,7 +258,7 @@ const Resume = () => {
             </div>
             <div
               id="1e37b4f6-68e8-4b88-b920-7cd9be4978af"
-              style={{ width: "75%" }}
+              style={{ width: "100%" }}
               className="column"
             >
               <ul
@@ -312,7 +316,7 @@ const Resume = () => {
             </div>
             <div
               id="d009bce1-f80d-4901-a2c5-fabfa6a28416"
-              style={{ width: "75%" }}
+              style={{ width: "100%" }}
               className="column"
             >
               <ul
@@ -370,7 +374,7 @@ const Resume = () => {
             </div>
             <div
               id="6f1745e8-0c40-4cff-af29-a8d237ec4101"
-              style={{ width: "75%" }}
+              style={{ width: "100%" }}
               className="column"
             >
               <ul
@@ -429,7 +433,7 @@ const Resume = () => {
             </div>
             <div
               id="0eb0f441-877a-47df-9087-8f8ad2087554"
-              style={{ width: "75%" }}
+              style={{ width: "100%" }}
               className="column"
             >
               <ul
@@ -486,7 +490,7 @@ const Resume = () => {
             </div>
             <div
               id="a2a02974-b120-4176-8b0a-0fc4b9f87708"
-              style={{ width: "75%" }}
+              style={{ width: "100%" }}
               className="column"
             >
               <ul
@@ -544,7 +548,7 @@ const Resume = () => {
             </div>
             <div
               id="631c968b-70f6-4dfa-b46e-e0bd4e0760d5"
-              style={{ width: "75%" }}
+              style={{ width: "100%" }}
               className="column"
             >
               <ul
@@ -602,7 +606,7 @@ const Resume = () => {
             </div>
             <div
               id="5e5e9653-ca84-42d6-91d1-b2e5967740f8"
-              style={{ width: "75%" }}
+              style={{ width: "100%" }}
               className="column"
             >
               <ul
@@ -652,7 +656,7 @@ const Resume = () => {
             </div>
             <div
               id="edfa7884-bc1a-4cb5-b59b-16f7af9d9434"
-              style={{ width: "75%" }}
+              style={{ width: "100%" }}
               className="column"
             >
               <ul
