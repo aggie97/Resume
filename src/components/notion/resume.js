@@ -29,7 +29,7 @@ const Resume = () => {
             <img
               alt={"test"}
               style={{ borderRadius: "50%" }}
-              src="/Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/KakaoTalk_Photo_2023-02-12-16-22-43-crop.jpeg"
+              src={`${process.env.PUBLIC_URL}/Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/KakaoTalk_Photo_2023-02-12-16-22-43-crop.jpeg`}
             />
           </figure>
         </div>
@@ -61,7 +61,11 @@ const Resume = () => {
                 aspectRatio: "1 / 1",
               }}
             >
-              <img className="icon" alt="telephone" src="/telephone-call.png" />
+              <img
+                className="icon"
+                alt="telephone"
+                src={`${process.env.PUBLIC_URL}/telephone-call.png`}
+              />
             </div>
             <div style={{ width: "100%" }}>
               <a href="tel:01062986609">010-6298-6609</a>
@@ -81,7 +85,7 @@ const Resume = () => {
               <img
                 alt={"test"}
                 className="icon"
-                src="/Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/velogLogo.jpeg"
+                src={`${process.env.PUBLIC_URL}/Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/velogLogo.jpeg`}
               />
             </div>
             <div style={{ width: "100%" }}>
@@ -108,7 +112,7 @@ const Resume = () => {
               <img
                 alt={"test"}
                 className="icon"
-                src="/Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/%EC%BA%A1%EC%B2%98.png"
+                src={`${process.env.PUBLIC_URL}/Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/%EC%BA%A1%EC%B2%98.png`}
               />
             </div>
             <div style={{ width: "100%" }}>

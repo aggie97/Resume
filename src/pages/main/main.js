@@ -23,7 +23,7 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
       <Content>
         <Profile isnavmode={isNavMode}>
           <Intro isnavmode={isNavMode}>
-            <img src={`/dev3d.png`} alt="developer" />
+            <img src={`${process.env.PUBLIC_URL}/dev3d.png`} alt="developer" />
           </Intro>
           <button onClick={() => navigator(`/`)}>Aggie</button>
         </Profile>
@@ -45,13 +45,22 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
         </Nav>
         <Footer>
           <Icons to="https://velog.io/@4ggie97" title="Blog" target="_blank">
-            <img src={`/logo/symbols.png`} alt="velog" />
+            <img
+              src={`${process.env.PUBLIC_URL}/logo/symbols.png`}
+              alt="velog"
+            />
           </Icons>
           <Icons to="https://github.com/aggie97" title="Github" target="_blank">
-            <img src={`/logo/github.png`} alt="github" />
+            <img
+              src={`${process.env.PUBLIC_URL}/logo/github.png`}
+              alt="github"
+            />
           </Icons>
           <Icons to="mailto:4ggie97@gmail.com" title="Gmail" target="_blank">
-            <img src={`/logo/gmail-logo.png`} alt="gmail" />
+            <img
+              src={`${process.env.PUBLIC_URL}/logo/gmail-logo.png`}
+              alt="gmail"
+            />
           </Icons>
         </Footer>
       </Content>
@@ -63,14 +72,18 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
         onClick={toggleDarkMode}
       >
         {isDarkMode ? (
-          <img src={`${"/sun.png"}`} alt="darkmode" />
+          <img src={`${process.env.PUBLIC_URL}/sun.png`} alt="darkmode" />
         ) : (
-          <img src={`${"/moon.png"}`} alt="darkmode" />
+          <img src={`${process.env.PUBLIC_URL}/moon.png`} alt="darkmode" />
         )}
       </ToggleDarkMode>
       <img
         style={{ display: "none" }}
-        src={`${isDarkMode ? "/summer.jpeg" : "/summer-dark.jpeg"}`}
+        src={`${
+          isDarkMode
+            ? `${process.env.PUBLIC_URL}/summer.jpeg`
+            : `${process.env.PUBLIC_URL}/summer-dark.jpeg`
+        }`}
         alt="reverse-prefer-color"
       />
     </Wrappper>
@@ -89,11 +102,11 @@ const Wrappper = styled(motion.div)`
   box-shadow: 0 5px 15px 10px #0002;
   ${(props) =>
     props.isDarkMode
-      ? css`
-          background: url("/summer-dark.jpeg");
+      ? `
+          background: url("${process.env.PUBLIC_URL}/summer-dark.jpeg");
         `
-      : css`
-          background: url("/summer.jpeg");
+      : `
+          background: url("${process.env.PUBLIC_URL}/summer.jpeg");
         `};
 
   background-position: center;
