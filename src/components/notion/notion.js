@@ -8,11 +8,7 @@ const Notion = ({ content }) => {
     <Wrapper>
       <article id="d03cbcad-0f2a-4711-ab1e-a3c85a3ff442" className="page sans">
         <div className="page-body">
-          {content === `${process.env.REACT_APP_PUBLIC_URL}/resume` ? (
-            <Resume />
-          ) : (
-            <Portfolio />
-          )}
+          {content === `/resume` ? <Resume /> : <Portfolio />}
         </div>
       </article>
     </Wrapper>

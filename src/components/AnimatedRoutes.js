@@ -13,13 +13,13 @@ const AnimatedRoutes = () => {
     <AnimatePresence>
       <Main isnavmode={isNavMode} setIsNavMode={setIsNavMode} />
       <Routes location={location} key={location.pathname}>
-        <Route path={`${process.env.REACT_APP_PUBLIC_URL}/`} element={<></>} />
+        <Route path={"/"} element={<></>} />
         <Route
-          path={`${process.env.REACT_APP_PUBLIC_URL}/portfolio`}
+          path={`/portfolio`}
           element={<Portfolio content={location.pathname} />}
         />
         <Route
-          path={`${process.env.REACT_APP_PUBLIC_URL}/resume`}
+          path={`/resume`}
           element={<Resume content={location.pathname} />}
         />
       </Routes>

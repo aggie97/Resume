@@ -11,9 +11,7 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
   const [isDarkMode, toggleMode] = useDarkMode();
 
   useEffect(() => {
-    setIsNavMode(
-      () => location.pathname !== `${process.env.REACT_APP_PUBLIC_URL}/`
-    );
+    setIsNavMode(() => location.pathname !== `/`);
   }, [location.pathname, setIsNavMode]);
 
   const toggleDarkMode = () => {
@@ -25,28 +23,21 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
       <Content>
         <Profile isnavmode={isNavMode}>
           <Intro isnavmode={isNavMode}>
-            <img
-              src={`${process.env.REACT_APP_PUBLIC_URL}/dev3d.png`}
-              alt="developer"
-            />
+            <img src={`/dev3d.png`} alt="developer" />
           </Intro>
-          <button
-            onClick={() => navigator(`${process.env.REACT_APP_PUBLIC_URL}/`)}
-          >
-            Aggie
-          </button>
+          <button onClick={() => navigator(`/`)}>Aggie</button>
         </Profile>
         <Nav>
           <LinkTo
             onClick={() => {
-              navigator(`${process.env.REACT_APP_PUBLIC_URL}/resume`);
+              navigator(`/resume`);
             }}
           >
             Resume
           </LinkTo>
           <LinkTo
             onClick={() => {
-              navigator(`${process.env.REACT_APP_PUBLIC_URL}/portfolio`);
+              navigator(`/portfolio`);
             }}
           >
             Portfolio
@@ -54,22 +45,13 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
         </Nav>
         <Footer>
           <Icons to="https://velog.io/@4ggie97" title="Blog" target="_blank">
-            <img
-              src={`${process.env.REACT_APP_PUBLIC_URL}/logo/symbols.png`}
-              alt="velog"
-            />
+            <img src={`/logo/symbols.png`} alt="velog" />
           </Icons>
           <Icons to="https://github.com/aggie97" title="Github" target="_blank">
-            <img
-              src={`${process.env.REACT_APP_PUBLIC_URL}/logo/github.png`}
-              alt="github"
-            />
+            <img src={`/logo/github.png`} alt="github" />
           </Icons>
           <Icons to="mailto:4ggie97@gmail.com" title="Gmail" target="_blank">
-            <img
-              src={`${process.env.REACT_APP_PUBLIC_URL}/logo/gmail-logo.png`}
-              alt="gmail"
-            />
+            <img src={`/logo/gmail-logo.png`} alt="gmail" />
           </Icons>
         </Footer>
       </Content>
@@ -81,22 +63,14 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
         onClick={toggleDarkMode}
       >
         {isDarkMode ? (
-          <img
-            src={`${process.env.REACT_APP_PUBLIC_URL}${"/sun.png"}`}
-            alt="darkmode"
-          />
+          <img src={`${"/sun.png"}`} alt="darkmode" />
         ) : (
-          <img
-            src={`${process.env.REACT_APP_PUBLIC_URL}${"/moon.png"}`}
-            alt="darkmode"
-          />
+          <img src={`${"/moon.png"}`} alt="darkmode" />
         )}
       </ToggleDarkMode>
       <img
         style={{ display: "none" }}
-        src={`${process.env.REACT_APP_PUBLIC_URL}${
-          isDarkMode ? "/summer.jpeg" : "/summer-dark.jpeg"
-        }`}
+        src={`${isDarkMode ? "/summer.jpeg" : "/summer-dark.jpeg"}`}
         alt="reverse-prefer-color"
       />
     </Wrappper>
