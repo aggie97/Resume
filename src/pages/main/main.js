@@ -90,10 +90,10 @@ const Wrappper = styled(motion.div)`
   ${(props) =>
     props.isDarkMode
       ? css`
-          background: url("./summer-dark.jpeg");
+          background: url("/summer-dark.jpeg");
         `
       : css`
-          background: url("./summer.jpeg");
+          background: url("/summer.jpeg");
         `};
 
   background-position: center;

@@ -35,9 +35,7 @@ function App() {
   return (
     <DarkModeProvider>
       <ThemeProvider theme={theme}>
-        <Router
-          basename={`${process.env.NODE_ENV === "production" ? "/Resume" : ""}`}
-        >
+        <Router basename={"/Resume"}>
           <ThemeWrapper>
             <AnimatedRoutes />
           </ThemeWrapper>
