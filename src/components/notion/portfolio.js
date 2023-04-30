@@ -13,7 +13,7 @@ const Portfolio = () => {
             <span style={{ borderBottom: "0.05em solid" }}>
               <strong>ONF(On And Off)</strong>
             </span>
-            <strong> : </strong>
+            <strong> :</strong>
             <mark className="highlight-gray">Team Project</mark>
           </h3>
           <p id="54656f97-32b1-4420-a61c-6ce76c800c44">
@@ -25,9 +25,7 @@ const Portfolio = () => {
             </a>
           </figure>
           <p id="d115ec2f-c5b3-4458-822c-10c98ceefc61">
-            <mark className="highlight-gray">
-              2022.11.28 ~ 2023.01.27(1차 마무리)
-            </mark>
+            <mark>기간 : 2022.10.27 ~ 2022.11.22(1차 마무리)</mark>
           </p>
           <div
             id="d329cbd4-6890-468d-b3ba-27b6ac6c229f"
@@ -119,15 +117,14 @@ const Portfolio = () => {
                 id="bc52e3eb-9bc3-42c7-8ee8-4ce4a9b72dc6"
                 className="bulleted-list"
               >
-                <li style={{ listStyleType: "circle" }}>
-                  기능 명세 작성 및 공유
-                </li>
+                <figure id="84cd9317-7f7b-4673-a3ed-c3ecd679426c">
+                  <li style={{ listStyleType: "circle" }}>
+                    기능 명세 작성 및 공유
+                  </li>
+                </figure>
               </ul>
             </li>
           </ul>
-          <p id="2ee23611-e55b-46db-9fae-edb343ac2d0f"></p>
-          <p id="61a0edb8-5f4e-49c6-95d2-41e78eff4db8"></p>
-          <p id="f43f49ee-9c01-4d59-9281-b3034b8bdd5c"></p>
           <hr id="6108bd47-e6b8-4251-ab14-a8195fffb9e9" />
           <h2 id="4705c22c-66e4-409e-80cb-e75e84193953">
             <span style={{ borderBottom: "0.05em solid" }}>BUSKER</span> :
@@ -169,6 +166,15 @@ const Portfolio = () => {
               참조해주시기 바랍니다.
             </p>
           </figure>
+          <div style={{ padding: "1rem 0" }}>
+            <p id="d115ec2f-c5b3-4458-822c-10c98ceefc61">
+              <mark>기간 : 2022.11.28 ~ 2023.01.27</mark>
+            </p>
+            <img
+              src={`${process.env.PUBLIC_URL}/buskerLanding.webp`}
+              alt="busker_landing_page"
+            />
+          </div>
           <h3 id="a0e3858d-add2-4aac-922e-f9381dfd03c9">Skill Stack</h3>
           <p id="175289b0-1b64-405c-89a4-0b1de3af4268">
             <code>React</code>, <code>TypeScript</code>, <code>Next.js</code>,
@@ -332,7 +338,11 @@ const Portfolio = () => {
               <ul>
                 <li style={{ listStyleType: "circle" }}>
                   <figure id="84cd9317-7f7b-4673-a3ed-c3ecd679426c">
-                    <a href="https://velog.io/@4ggie97/4%EC%A3%BC-%EB%8F%99%EC%95%88%EC%9D%98-%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://velog.io/@4ggie97/4%EC%A3%BC-%EB%8F%99%EC%95%88%EC%9D%98-%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0"
+                    >
                       velog 회고록 링크
                     </a>
                   </figure>
@@ -357,6 +367,15 @@ const Portfolio = () => {
               usedMarket Github Client Repo 링크
             </a>
           </figure>
+          <div>
+            <p id="d115ec2f-c5b3-4458-822c-10c98ceefc61">
+              <mark>기간 : 2022.08.27 ~ 2022.09.30</mark>
+            </p>
+            <img
+              src={`${process.env.PUBLIC_URL}/usedMarketMain.webp`}
+              alt="usedMarket_Main_page"
+            />
+          </div>
           <h3 id="4941ac6f-1c43-43dd-ace2-2045c25aaf2a">Skill Stack</h3>
           <p id="88416aef-7b75-4d9f-9202-a88b1b58cd6e">
             <code>React</code>, <code>TypeScript</code>, <code>Next.js</code>,

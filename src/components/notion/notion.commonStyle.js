@@ -219,6 +219,22 @@ export const Wrapper = styled.div`
     word-break: keep-all;
   }
 
+  @media (max-width: 800px) {
+    th {
+      display: none;
+    }
+
+    td {
+      display: flex;
+
+      :before {
+        content: attr(data-cell);
+        font-weight: bold;
+        min-width: 5rem;
+      }
+    }
+  }
+
   ol,
   ul {
     margin: 0;

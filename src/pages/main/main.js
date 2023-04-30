@@ -44,37 +44,43 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
           </LinkTo>
         </Nav>
         <Footer>
-          <Icons to="https://velog.io/@4ggie97" title="Blog" target="_blank">
-            <img
-              src={`${process.env.PUBLIC_URL}/logo/symbols.png`}
-              alt="velog"
-            />
+          <Icons>
+            <Icon to="https://velog.io/@4ggie97" title="Blog" target="_blank">
+              <img
+                src={`${process.env.PUBLIC_URL}/logo/symbols.png`}
+                alt="velog"
+              />
+            </Icon>
+            <Icon
+              to="https://github.com/aggie97"
+              title="Github"
+              target="_blank"
+            >
+              <img
+                src={`${process.env.PUBLIC_URL}/logo/github.png`}
+                alt="github"
+              />
+            </Icon>
+            <Icon to="mailto:4ggie97@gmail.com" title="Gmail" target="_blank">
+              <img
+                src={`${process.env.PUBLIC_URL}/logo/gmail-logo.png`}
+                alt="gmail"
+              />
+            </Icon>
           </Icons>
-          <Icons to="https://github.com/aggie97" title="Github" target="_blank">
+          <GitGrass>
             <img
-              src={`${process.env.PUBLIC_URL}/logo/github.png`}
-              alt="github"
+              src="https://ghchart.rshah.org/aggie97"
+              alt="github_contribution_graph"
             />
-          </Icons>
-          <Icons to="mailto:4ggie97@gmail.com" title="Gmail" target="_blank">
-            <img
-              src={`${process.env.PUBLIC_URL}/logo/gmail-logo.png`}
-              alt="gmail"
-            />
-          </Icons>
+          </GitGrass>
         </Footer>
       </Content>
-      <ToggleDarkMode
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ delay: 1 }}
-        onClick={toggleDarkMode}
-      >
+      <ToggleDarkMode onClick={toggleDarkMode}>
         {isDarkMode ? (
-          <img src={`${process.env.PUBLIC_URL}/sun.png`} alt="darkmode" />
-        ) : (
           <img src={`${process.env.PUBLIC_URL}/moon.png`} alt="darkmode" />
+        ) : (
+          <img src={`${process.env.PUBLIC_URL}/sun.png`} alt="lightmode" />
         )}
       </ToggleDarkMode>
       <img
@@ -141,12 +147,16 @@ const ToggleDarkMode = styled(motion.div)`
     height: 2rem;
     transition: all 0.3s ease;
   }
+
+  z-index: 999;
 `;
 
 const Content = styled.div`
+  width: 20rem;
+  max-width: 90%;
   display: flex;
   flex-direction: column;
-  gap: 3.5rem;
+  gap: 2.5rem;
   background-color: #2228;
   border-radius: 1.5rem;
   padding: 3rem 1rem;
@@ -203,18 +213,28 @@ const LinkTo = styled.button`
   text-decoration: none;
   color: #fff;
   cursor: pointer;
+
   :hover {
     text-decoration: underline;
   }
 `;
 
-const Footer = styled.footer`
+const Footer = styled.div`
+  width: 100%;
+`;
+
+const Icons = styled.div`
   display: flex;
   justify-content: center;
   gap: 1rem;
 `;
 
-const Icons = styled(Link)`
+const GitGrass = styled.div`
+  width: 100%;
+  overflow-x: scroll;
+`;
+
+const Icon = styled(Link)`
   border-radius: 0.5rem;
   width: 3rem;
   padding: 0.5rem;

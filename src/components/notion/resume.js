@@ -12,16 +12,18 @@ const Resume = () => {
       <div id="bd2541d5-de67-4a6b-b006-4ed59d7f32ac" className="column-list">
         <div id="f878198f-0152-4db6-b025-cf6f5ab56e79" className="column">
           <h3 id="6821b454-3916-499d-b03b-0c49e8b284b9">
-            함께 하기 위해 무한 고민하는 프론트엔드 개발자, 김민겸 입니다.
+            함께 하기 위해 무한 고민하는 프론트엔드 개발자, 김민겸입니다.
           </h3>
           <p id="1592e4b0-a127-4fd2-a4d4-b098c45c2485">
-            비개발직군들에게는 <strong>코드보다 이해하기 쉬운 말로</strong>,
+            비개발직군들과는 <strong>코드보다 이해하기 쉬운 말로</strong>,
             <br />
-            개발직군들에게는 <strong>말보다 가독성이 좋은 코드로</strong> 하는
-            것에 가치를 두고,
+            개발직군들과는 <strong>말보다 가독성이 좋은 코드로</strong>
+            <br /> 소통하는 것에 가치를 두고,
             <br />
-            <strong>불확실한 기억보단 확실한 기록을</strong> 하는 개발자를
-            지향하고 있습니다.
+            <p>
+              <strong>불확실한 기억보단 확실한 기록을</strong> 하는 개발자를
+              지향하고 있습니다.
+            </p>
           </p>
         </div>
         <div id="aa6de163-fd60-4197-9422-24482ca247d3" className="column">
@@ -149,21 +151,21 @@ const Resume = () => {
       </h1>
       <p id="c8b3477a-a782-4cdd-8d8d-7200389a5062" className="">
         저는 전자 및 통신을 전공했습니다. 강의에서 아두이노와 라즈베리 파이를
-        통해 C와 Python의 기초를 익히게 되었고 여러 가지 센서들을 결합해 작품을
-        만드는 것을 시작으로 프로그래밍에 흥미를 가지기 시작했습니다. 여러 가지
-        작품들 중 대다수가 어플과 연동되어있었고 항상 UI가 아쉬웠던 것이 저에게
-        크게 다가왔습니다. 이를 계기로 졸업 직후부터 프론트 엔드 개발자가 되기
-        위한 공부를 시작했습니다.
+        통해 C와 Python의 기초를 익히게 되었고 다양한 센서들을 결합해 작품을
+        만드는 것을 시작으로 프로그래밍에 흥미를 가지기 시작했습니다. 작품들 중
+        대다수가 어플과 연동되어있었고 항상 UI가 아쉬웠던 것이 저에게 크게
+        다가왔습니다. 이를 계기로 졸업 직후부터 프론트 엔드 개발자가 되기 위한
+        공부를 시작했습니다.
       </p>
       <p id="9c296626-9dce-433e-a46b-d0ee31347a63" className="">
-        생활코딩, 유데미 등 여러 온라인 강의를 들으며 HTML, CSS, JavaScript,
-        React를 공부했고 React의 기초 정도를 익힌 상태에서 새로운 기술과 협업
-        능력 그리고 개발자 네트워크에 참여할 기회를 얻기 위해 3개월 과정의 부트
+        생활코딩, 유데미 등 온라인 강의를 들으며 HTML, CSS, JavaScript, React를
+        공부했고 React의 기초 정도를 익힌 상태에서 새로운 기술과 협업 능력
+        그리고 개발자 네트워크에 참여할 기회를 얻기 위해 3개월 과정의 부트
         캠프에 참여하게 되었습니다.
       </p>
       <p id="211fc6d8-0693-4469-a677-1a3da43336e0" className="">
-        현재는 JavaScript 심화 학습을 위해 수료생들과 책을 주제로 스터디를
-        진행하고 있습니다.
+        현재는 JavaScript 심화 학습을 위해 수료생들과 책(모던 자바스크립트 딥
+        다이브)을 주제로 스터디를 진행하고 있습니다.
       </p>
       <h1 id="f90425a4-2915-47a3-aa55-24431a221221" className="">
         <mark>Skills </mark>
@@ -324,8 +326,8 @@ const Resume = () => {
                 className="bulleted-list"
               >
                 <li style={{ listStyleType: "disc" }}>
-                  ES6+ 문법을 사용하여 간결하면서 가독성이 좋은 코드를 작성하기
-                  하기 위해 노력하고 있습니다.
+                  간결하면서 가독성이 좋은 코드를 작성하기 하기 위해 ES6+ 문법을
+                  숙지하고 사용하고 있습니다.
                 </li>
               </ul>
               <ul
@@ -333,8 +335,7 @@ const Resume = () => {
                 className="bulleted-list"
               >
                 <li style={{ listStyleType: "disc" }}>
-                  다양한 Web APIs를 익히면서 상황에 맞게 사용할 수 있도록
-                  노력하고 있습니다.
+                  다양한 Web APIs를 익히면서 상황에 맞게 사용하고 있습니다.
                 </li>
               </ul>
             </div>
@@ -498,8 +499,9 @@ const Resume = () => {
                 className="bulleted-list"
               >
                 <li style={{ listStyleType: "disc" }}>
-                  페이지별로 다른 렌더링 방식을 사용하여 검색 엔진 최적화와 빠른
-                  렌더링으로 인한 UX 개선을 위해 노력합니다.
+                  SSR과 SPA의 장점들을 조합한 Next.js의 이점을 잘 알고 있으며,
+                  페이지별로 적절한 렌더링 방식을 채택하여 보여주기 위해
+                  사용하고 있습니다.{" "}
                 </li>
               </ul>
               <ul
@@ -508,7 +510,7 @@ const Resume = () => {
               >
                 <li style={{ listStyleType: "disc" }}>
                   이미지와 폰트 최적화, 빠른 새로고침, 파일 라우팅 시스템 등
-                  내장 기능들을 최대한 활용하려고 합니다.
+                  내장 기능들을 최대한 활용하고 있습니다.
                 </li>
               </ul>
             </div>
@@ -615,8 +617,8 @@ const Resume = () => {
               >
                 <li style={{ listStyleType: "disc" }}>
                   프로젝트의 안정성을 높이기 위해 항상 커밋 메세지 컨벤션을
-                  정하고 따르려고 노력하며, 더 직관적인 커밋 확인을 위한
-                  Gitmoji를 애용합니다.
+                  정하고, 보다 더 직관적인 커밋 확인을 위한 Gitmoji를
+                  애용합니다.
                 </li>
               </ul>
             </div>
@@ -700,79 +702,143 @@ const Resume = () => {
           </thead>
           <tbody>
             <tr id="0d65e669-3d3c-4a1a-a64b-ac1b711550c8">
-              <td className="cell-title">2023.03.12~ing</td>
-              <td className="cell-iw:I">
+              <td data-cell="기간" className="cell-title">
+                2023.03.12~ing
+              </td>
+              <td data-cell="교육명" className="cell-title">
                 <span className="selected-value">자바스크립트 스터디</span>
               </td>
-              <td className="cell-Kfg">모던 자바스크립트 딥 다이브 스터디</td>
-              <td className="cell-PU">
-                <a href="https://www.notion.so/fdabcb7beff744d0b4f05ce63aa7c1fe">
-                  스터디 노션 링크
+              <td data-cell="내용" className="cell-Kfg">
+                모던 자바스크립트 딥 다이브 스터디
+              </td>
+              <td data-cell="기관명" className="cell-PU">
+                <a
+                  rel="noreferrer"
+                  href="https://www.notion.so/fdabcb7beff744d0b4f05ce63aa7c1fe"
+                  target="_blank"
+                >
+                  스터디 노션
                 </a>
               </td>
             </tr>
             <tr id="cf898cec-c204-459c-866e-2bbdcb94fb27">
-              <td className="cell-title">2022.08.01~2022.11.24</td>
-              <td className="cell-iw:I">
+              <td data-cell="기간" className="cell-title">
+                2022.08.01~2022.11.24
+              </td>
+              <td data-cell="교육명" className="cell-title">
                 <span className="selected-value">코드캠프 FE 코스 9기</span>
               </td>
-              <td className="cell-Kfg">
+              <td data-cell="내용" className="cell-Kfg">
                 TypeScript, React.js, Next.js, Emotion, GraphQL, Apollo-Client,
                 Recoil까지 프론트엔드 개발 전반에 대한 교육
               </td>
-              <td className="cell-PU">코드캠프</td>
+              <td data-cell="기관명" className="cell-PU">
+                <a
+                  rel="noreferrer"
+                  href="https://codebootcamp.co.kr/"
+                  target="_blank"
+                >
+                  코드캠프
+                </a>
+              </td>
             </tr>
             <tr id="0db5db83-d768-4305-a9ad-4493767d8cb0">
-              <td className="cell-title">2021.11.05~2021.11.20</td>
-              <td className="cell-iw:I">
+              <td data-cell="기간" className="cell-title">
+                2021.11.05~2021.11.20
+              </td>
+              <td data-cell="교육명" className="cell-title">
                 <span className="selected-value">
                   ReactJS로 영화 웹 서비스 만들기
                 </span>
               </td>
-              <td className="cell-Kfg">
+              <td data-cell="내용" className="cell-Kfg">
                 리액트와 오픈 API를 이용한 영화 소개 사이트 구현 강의
               </td>
-              <td className="cell-PU">NomadCoders</td>
+              <td data-cell="기관명" className="cell-PU">
+                <a
+                  href="https://nomadcoders.co/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  NomadCoders
+                </a>
+              </td>
             </tr>
             <tr id="3c9f7581-b138-48e3-9e6c-574a9b6bcabe">
-              <td className="cell-title">2021.11.01~2021.11.15</td>
-              <td className="cell-iw:I">
+              <td data-cell="기간" className="cell-title">
+                2021.11.01~2021.11.15
+              </td>
+              <td data-cell="교육명" className="cell-title">
                 <span className="selected-value">바닐라 JS 2주 완성반</span>
               </td>
-              <td className="cell-Kfg">
+              <td data-cell="내용" className="cell-Kfg">
                 바닐라JS로 크롬앱 만들기를 위한 사전 강의
               </td>
-              <td className="cell-PU">NomadCoders</td>
+              <td data-cell="기관명" className="cell-PU">
+                <a
+                  href="https://nomadcoders.co/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  NomadCoders
+                </a>
+              </td>
             </tr>
             <tr id="300e095b-b603-4fcb-999e-3dc93382b101">
-              <td className="cell-title">2021.08.03~2021.10.15</td>
-              <td className="cell-iw:I">
+              <td data-cell="기간" className="cell-title">
+                2021.08.03~2021.10.15
+              </td>
+              <td data-cell="교육명" className="cell-title">
                 <span className="selected-value">
                   개발자를 위한 윈도우 셋업
                 </span>
               </td>
-              <td className="cell-Kfg">
+              <td data-cell="내용" className="cell-Kfg">
                 윈도우 사용자들을 위한 WSL2의 익숙한 사용법을 담은 강의
               </td>
-              <td className="cell-PU">NomadCoders</td>
+              <td data-cell="기관명" className="cell-PU">
+                <a
+                  href="https://nomadcoders.co/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  NomadCoders
+                </a>
+              </td>
             </tr>
             <tr id="2fe02e9f-e898-4261-a709-34c5dc294db8">
-              <td className="cell-title">2021.08.01~2021.10.15</td>
-              <td className="cell-iw:I">
+              <td data-cell="기간" className="cell-title">
+                2021.08.01~2021.10.15
+              </td>
+              <td data-cell="교육명" className="cell-title">
                 <span className="selected-value">바닐라JS로 크롬앱 만들기</span>
               </td>
-              <td className="cell-Kfg">
+              <td data-cell="내용" className="cell-Kfg">
                 JavaScript로 Momentum를 구현해보는 강의
               </td>
-              <td className="cell-PU">NomadCoders</td>
+              <td data-cell="기관명" className="cell-PU">
+                <a
+                  href="https://nomadcoders.co/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  NomadCoders
+                </a>
+              </td>
             </tr>
             <tr id="55b9def7-8fe6-47c3-af65-2f064b8f5e49">
-              <td className="cell-title">2016.03.01~2023.2.14</td>
-              <td className="cell-iw:I">
+              <td data-cell="기간" className="cell-title">
+                2016.03.01~2023.2.14
+              </td>
+              <td data-cell="교육명" className="cell-title">
                 <span className="selected-value">전자 및 통신 공학</span>
               </td>
-              <td className="cell-Kfg">3년제 전문 학사 과정</td>
-              <td className="cell-PU">울산과학대학교</td>
+              <td data-cell="내용" className="cell-Kfg">
+                3년제 전문 학사 과정
+              </td>
+              <td data-cell="기관명" className="cell-PU">
+                울산과학대학교
+              </td>
             </tr>
           </tbody>
         </table>
