@@ -76,13 +76,14 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
           </GitGrass>
         </Footer>
       </Content>
-      <ToggleDarkMode onClick={toggleDarkMode}>
-        {isDarkMode ? (
+      <ToggleButtonBox onClick={toggleDarkMode}>
+        {isDarkMode && (
           <img src={`${process.env.PUBLIC_URL}/moon.png`} alt="darkmode" />
-        ) : (
+        )}{" "}
+        {!isDarkMode && (
           <img src={`${process.env.PUBLIC_URL}/sun.png`} alt="lightmode" />
         )}
-      </ToggleDarkMode>
+      </ToggleButtonBox>
       <img
         style={{ display: "none" }}
         src={`${
@@ -129,7 +130,7 @@ const Wrappper = styled(motion.div)`
   transition: width 0.5s ease, background 0.5s ease;
 `;
 
-const ToggleDarkMode = styled(motion.div)`
+const ToggleButtonBox = styled(motion.div)`
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -142,10 +143,20 @@ const ToggleDarkMode = styled(motion.div)`
   }
   transition: all 0.2s ease;
 
-  img {
+  @keyframes toggleAnime {
+    0% {
+      opacity: 0;
+      transform: rotate(120deg);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+  }
+  > img {
     width: 2rem;
     height: 2rem;
-    transition: all 0.3s ease;
+    animation: toggleAnime 0.5s;
   }
 
   z-index: 999;
