@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDarkMode } from "../../App";
-
 const Resume = () => {
   const [isDarkMode] = useDarkMode();
+  const [open, setOpen] = useState(false);
   return (
     <div>
       <header>
@@ -36,7 +36,7 @@ const Resume = () => {
           </figure>
         </div>
       </div>
-      <h1 id="7ef8f875-df03-4832-a8ba-287f954b3e46" className="">
+      <h1 id="7ef8f875-df03-4832-a8ba-287f954b3e46">
         <mark>Contact</mark>
       </h1>
       <div
@@ -146,28 +146,53 @@ const Resume = () => {
           </figure>
         </div>
       </div>
-      <h1 id="f81afe60-a0ae-4402-9340-d1da65153566" className="">
-        <mark>About </mark>
+      <h1 id="f81afe60-a0ae-4402-9340-d1da65153566">
+        <mark>About</mark>
       </h1>
-      <p id="c8b3477a-a782-4cdd-8d8d-7200389a5062" className="">
-        저는 전자 및 통신을 전공했습니다. 강의에서 아두이노와 라즈베리 파이를
-        통해 C와 Python의 기초를 익히게 되었고 다양한 센서들을 결합해 작품을
-        만드는 것을 시작으로 프로그래밍에 흥미를 가지기 시작했습니다. 작품들 중
-        대다수가 어플과 연동되어있었고 항상 UI가 아쉬웠던 것이 저에게 크게
-        다가왔습니다. 이를 계기로 졸업 직후부터 프론트 엔드 개발자가 되기 위한
-        공부를 시작했습니다.
+      <p id="c8b3477a-a782-4cdd-8d8d-7200389a5062">
+        안녕하세요. 1픽셀 어긋나는 것을 참지 못하는 사소한 이유로 개발을
+        시작했지만, 개발의 무궁무진함과 협업의 재미에 빠지게 되어 대학 졸업 후
+        부트 캠프를 수료하고 프론트 엔드 개발자가 되기 위한 여정을 걷고 있는
+        김민겸입니다.
       </p>
-      <p id="9c296626-9dce-433e-a46b-d0ee31347a63" className="">
-        생활코딩, 유데미 등 온라인 강의를 들으며 HTML, CSS, JavaScript, React를
-        공부했고 React의 기초 정도를 익힌 상태에서 새로운 기술과 협업 능력
-        그리고 개발자 네트워크에 참여할 기회를 얻기 위해 3개월 과정의 부트
-        캠프에 참여하게 되었습니다.
+      <p id="9c296626-9dce-433e-a46b-d0ee31347a63">
+        React, Next.js, TypeScript, Emotion, GraphQL(Apollo-Client), Recoil을
+        사용하여 프로젝트를 진행하고, Google Cloud Platform과 AWS 그리고
+        Docker를 사용하여 배포해본 경험이 있습니다.
       </p>
-      <p id="211fc6d8-0693-4469-a677-1a3da43336e0" className="">
-        현재는 JavaScript 심화 학습을 위해 수료생들과 책(모던 자바스크립트 딥
-        다이브)을 주제로 스터디를 진행하고 있습니다.
+      <p id="211fc6d8-0693-4469-a677-1a3da43336e0">
+        비효율적인 반복 작업을 개선하기 위해 공통 컴포넌트를 만드는 것을
+        좋아하며, 팀 단위의 효율적인 개발 환경에 대해 고민하곤 합니다.
+        <br /> 현재는 Rest API와 Redux에 관심을 가지고 독학하면서 JavaScript
+        심화 학습을 위해 수료생들과 책(모던 자바스크립트 딥 다이브)을 주제로
+        스터디를 진행하고 있습니다.
       </p>
-      <h1 id="f90425a4-2915-47a3-aa55-24431a221221" className="">
+      <h2
+        style={{ cursor: "pointer" }}
+        onClick={() => setOpen((prev) => !prev)}
+      >
+        <div className={`toggleButton ${open ? "openedToggle" : ""}`}>▷</div>
+        Detail
+      </h2>
+      <div className={`detail ${open ? "open" : "close"}`}>
+        <div>
+          <p>
+            저는 전자 및 통신을 전공했습니다. 강의에서 아두이노와 라즈베리
+            파이를 통해 C와 Python의 기초를 익히게 되었고 다양한 센서들을 결합해
+            작품을 만드는 것을 시작으로 프로그래밍에 흥미를 가지기 시작했습니다.
+          </p>
+          <p>
+            작품들 중 대다수가 어플과 연동되어있었고 항상 UI가 아쉬웠던 것이
+            저에게 크게 다가왔습니다. 이를 계기로 졸업 직후부터 프론트 엔드
+            개발자가 되기 위한 공부를 시작했습니다. 생활코딩, 유데미 등 온라인
+            강의를 들으며 HTML, CSS, JavaScript, React를 공부했고 React의 기초
+            정도를 익힌 상태에서 새로운 기술과 협업 능력 그리고 개발자
+            네트워크에 참여할 기회를 얻기 위해 3개월 과정의 부트 캠프에 참여하게
+            되었습니다.
+          </p>
+        </div>
+      </div>
+      <h1 id="f90425a4-2915-47a3-aa55-24431a221221">
         <mark>Skills </mark>
       </h1>
       <div id="bbbe0913-f263-4f07-bdae-7b29c32efabc" className="column-list">
@@ -683,8 +708,8 @@ const Resume = () => {
           </figure>
         </div>
       </div>
-      <p id="30007d9c-b943-4665-8960-36a3230d1fe3" className=""></p>
-      <h1 id="3eb2286e-0415-455e-91de-5ac2eaa9f554" className="">
+      <p id="30007d9c-b943-4665-8960-36a3230d1fe3"></p>
+      <h1 id="3eb2286e-0415-455e-91de-5ac2eaa9f554">
         <mark>Career</mark>
       </h1>
       <div

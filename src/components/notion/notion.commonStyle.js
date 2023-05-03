@@ -4,6 +4,31 @@ export const NotionCommonStyles = styled.div`
   @media (max-width: 859px) {
     padding-top: 5rem;
   }
+
+  .detail {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s;
+    padding: 1rem;
+    > div {
+      overflow: hidden;
+    }
+  }
+
+  div.open {
+    grid-template-rows: 1fr;
+  }
+
+  .toggleButton {
+    display: inline-block;
+    width: fit-content;
+    aspect-ratio: 1 / 1;
+  }
+
+  div.openedToggle {
+    transform: rotate(90deg);
+  }
+
   html {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
