@@ -4,11 +4,9 @@ import Notion from "../../components/notion/notion";
 const Portfolio = ({ content }) => {
   return (
     <>
-      {content === `/portfolio` && (
-        <Wrapper>
-          <Notion content={content} />
-        </Wrapper>
-      )}
+      <Wrapper>
+        <Notion content={content} />
+      </Wrapper>
     </>
   );
 };

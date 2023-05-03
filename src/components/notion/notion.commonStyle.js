@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Wrapper = styled.div`
+export const NotionCommonStyles = styled.div`
   html {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;

@@ -4,11 +4,9 @@ import Notion from "../../components/notion/notion";
 const Resume = ({ content }) => {
   return (
     <>
-      {content === `/resume` && (
-        <Wrapper>
-          <Notion content={content} />
-        </Wrapper>
-      )}
+      <Wrapper>
+        <Notion content={content} />
+      </Wrapper>
     </>
   );
 };
