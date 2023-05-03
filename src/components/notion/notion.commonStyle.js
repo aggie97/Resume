@@ -1,6 +1,9 @@
 import styled from "@emotion/styled";
 
 export const NotionCommonStyles = styled.div`
+  @media (max-width: 859px) {
+    padding-top: 5rem;
+  }
   html {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;

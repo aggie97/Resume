@@ -20,7 +20,7 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
 
   return (
     <Wrappper isDarkMode={isDarkMode} isnavmode={isNavMode}>
-      <Content>
+      <Content isnavmode={isNavMode}>
         <Profile isnavmode={isNavMode}>
           <Intro isnavmode={isNavMode}>
             <img src={`${process.env.PUBLIC_URL}/dev3d.png`} alt="developer" />
@@ -45,7 +45,7 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
             Portfolio
           </LinkTo>
         </Nav>
-        <Footer>
+        <Footer isnavmode={isNavMode}>
           <Icons>
             <Icon to="https://velog.io/@4ggie97" title="Blog" target="_blank">
               <img
@@ -108,7 +108,7 @@ const Wrappper = styled(motion.div)`
   justify-content: center;
   align-items: center;
   position: fixed;
-  box-shadow: 0 5px 15px 10px #0002;
+  box-shadow: 5px 0px 15px 5px rgba(0, 0, 0, 0.5);
   ${(props) =>
     props.isDarkMode
       ? `
@@ -120,16 +120,49 @@ const Wrappper = styled(motion.div)`
 
   background-position: center;
   background-size: cover;
+  transition: width 0.5s ease;
 
   @media (max-width: 859px) {
-    width: ${(props) => (props.isnavmode ? "0px" : "100%")};
-    > div {
-      opacity: ${(props) => (props.isnavmode ? "0" : "1")};
-      transition: opacity ${(props) => (props.isnavmode ? "0.1s" : "0.5s")} ease
-        ${(props) => props.isnavmode || "0.5s"};
-    }
+    width: 100%;
+    height: ${(props) => (props.isnavmode ? "5rem" : "100vh")};
+    background: ${(props) =>
+      props.isnavmode && (props.isDarkMode ? "#333" : "#bbb")};
+    box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.5);
+    transition: none;
   }
-  transition: width 0.5s ease, background 0.5s ease;
+`;
+
+const Content = styled.div`
+  width: 20rem;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  background-color: #2228;
+  border-radius: 1.5rem;
+  padding: 3rem 1rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 859px) {
+    ${({ isnavmode }) =>
+      isnavmode &&
+      css`
+        width: 100%;
+        max-width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+        background-color: transparent;
+        padding: 0 1rem;
+        img[alt="developer"] {
+          display: none;
+        }
+      `}
+  }
 `;
 
 const ToggleButtonBox = styled(motion.div)`
@@ -162,22 +195,6 @@ const ToggleButtonBox = styled(motion.div)`
   }
 
   z-index: 999;
-`;
-
-const Content = styled.div`
-  width: 20rem;
-  max-width: 90%;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  background-color: #2228;
-  border-radius: 1.5rem;
-  padding: 3rem 1rem;
-
-  img {
-    width: 100%;
-    height: 100%;
-  }
 `;
 
 const Profile = styled.div`
@@ -232,6 +249,16 @@ const LinkTo = styled.button`
 
 const Footer = styled.div`
   width: 100%;
+  @media (max-width: 859px) {
+    ${({ isnavmode }) =>
+      isnavmode &&
+      css`
+        width: auto;
+        * {
+          display: none;
+        }
+      `}
+  }
 `;
 
 const Icons = styled.div`

@@ -12,6 +12,7 @@ export default ThemeWrapper;
 
 const Wrapper = styled.div`
   display: flex;
+
   color: ${(props) =>
     props.isDarkMode ? props.theme.darkModeColor : props.theme.lightModeColor};
   background-color: ${(props) =>
