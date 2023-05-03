@@ -11,7 +11,7 @@ const Notion = ({ content }) => {
     setTimeout(() => {
       window.scrollTo(0, 0);
     }, 500);
-  }, [location]);
+  }, [location.pathname]);
   return (
     <NotionCommonStyles>
       <article id="d03cbcad-0f2a-4711-ab1e-a3c85a3ff442" className="page sans">

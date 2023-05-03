@@ -29,6 +29,7 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
         </Profile>
         <Nav>
           <LinkTo
+            isActive={location.pathname === "/resume"}
             onClick={() => {
               navigator(`/resume`);
             }}
@@ -36,6 +37,7 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
             Resume
           </LinkTo>
           <LinkTo
+            isActive={location.pathname === "/portfolio"}
             onClick={() => {
               navigator(`/portfolio`);
             }}
@@ -146,11 +148,11 @@ const ToggleButtonBox = styled(motion.div)`
   @keyframes toggleAnime {
     0% {
       opacity: 0;
-      transform: rotate(120deg);
+      transform: rotate(120deg) scale(0.5);
     }
     100% {
       opacity: 1;
-      transform: rotate(0deg);
+      transform: rotate(0deg) scale(1);
     }
   }
   > img {
@@ -225,9 +227,7 @@ const LinkTo = styled.button`
   color: #fff;
   cursor: pointer;
 
-  :hover {
-    text-decoration: underline;
-  }
+  text-decoration: ${({ isActive }) => (isActive ? "underline" : "none")};
 `;
 
 const Footer = styled.div`
