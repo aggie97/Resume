@@ -69,7 +69,6 @@ export const NotionCommonStyles = styled.div`
 
   h1 {
     font-size: 1.875rem;
-    margin-top: 1.875rem;
   }
 
   h2 {
@@ -90,12 +89,20 @@ export const NotionCommonStyles = styled.div`
   }
 
   .callout {
-    border-radius: 3px;
-    padding: 1rem;
+    flex: 1;
+    padding: 0.5rem;
 
     :nth-of-type(-n + 4) {
       margin-bottom: 0;
     }
+  }
+
+  .exp_header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.5rem;
   }
 
   figure {
@@ -182,6 +189,7 @@ export const NotionCommonStyles = styled.div`
   .column {
     * {
       word-break: keep-all;
+      margin: 0;
     }
     h3 {
       @media (max-width: 768px) {
@@ -453,7 +461,6 @@ export const NotionCommonStyles = styled.div`
 
   .image {
     border: none;
-    margin: 1.5em 0;
     padding: 0;
     border-radius: 0;
     text-align: center;

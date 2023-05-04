@@ -40,11 +40,9 @@ const Wrapper = styled.div`
     }
   }
 
-  tr:nth-of-type(2n) {
-    background-color: ${(props) => (props.isDarkMode ? "#444" : "#eee")};
-  }
-
-  figure.callout {
+  tr:nth-of-type(2n),
+  figure.callout,
+  .exp_header {
     background-color: ${(props) => (props.isDarkMode ? "#444" : "#eee")};
   }
 

@@ -120,7 +120,7 @@ const Wrappper = styled(motion.div)`
 
   background-position: center;
   background-size: cover;
-  transition: width 0.5s ease;
+  transition: width 0.5s ease, background 0.5s ease;
 
   @media (max-width: 859px) {
     width: 100%;
@@ -128,7 +128,6 @@ const Wrappper = styled(motion.div)`
     background: ${(props) =>
       props.isnavmode && (props.isDarkMode ? "#333" : "#bbb")};
     box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.5);
-    transition: none;
   }
 `;
 
@@ -198,8 +197,12 @@ const ToggleButtonBox = styled(motion.div)`
 `;
 
 const Profile = styled.div`
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   button {
+    text-align: center;
     background-color: transparent;
     border: none;
     color: #fff;
@@ -215,6 +218,10 @@ const Profile = styled.div`
           : css`
               cursor: default;
             `}
+    }
+    @media (max-width: 859px) {
+      font-size: 1.5rem;
+      flex-direction: row;
     }
   }
 `;
@@ -245,6 +252,10 @@ const LinkTo = styled.button`
   cursor: pointer;
 
   text-decoration: ${({ isActive }) => (isActive ? "underline" : "none")};
+
+  @media (max-width: 600px) {
+    font-size: 1.2em;
+  }
 `;
 
 const Footer = styled.div`

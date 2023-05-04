@@ -25,7 +25,7 @@ const Portfolio = () => {
             </a>
           </figure>
           <p id="d115ec2f-c5b3-4458-822c-10c98ceefc61">
-            <mark>기간 : 2022.10.27 ~ 2022.11.22(1차 마무리)</mark>
+            <mark>기간 : 2022.11.28 ~ 2023.01.27(1차 마무리)</mark>
           </p>
           <div
             id="d329cbd4-6890-468d-b3ba-27b6ac6c229f"
@@ -168,7 +168,7 @@ const Portfolio = () => {
           </figure>
           <div style={{ padding: "1rem 0" }}>
             <p id="d115ec2f-c5b3-4458-822c-10c98ceefc61">
-              <mark>기간 : 2022.11.28 ~ 2023.01.27</mark>
+              <mark>기간 : 2022.10.27 ~ 2022.11.22</mark>
             </p>
             <img
               src={`${process.env.PUBLIC_URL}/buskerLanding.webp`}
