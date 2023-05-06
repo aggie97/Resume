@@ -42,14 +42,16 @@ const Resume = () => {
       <div id="10e1d97f-85ca-45e5-9777-36eb2bebaebf" className="contact">
         <div
           id="2acf0b24-753a-4c04-b83f-7c78ac56f5d9"
-          style={{ display: "flex", flexWrap: "wrap" }}
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+          }}
           className="column"
         >
           <figure
             className="callout"
             style={{
-              width: "fit-content",
-              whiteSpace: "pre-wrap",
+              minWidth: "fit-content",
               display: "flex",
               gap: "1rem",
             }}
@@ -67,13 +69,25 @@ const Resume = () => {
                 src={`${process.env.PUBLIC_URL}/telephone-call.png`}
               />
             </div>
-            <div style={{ width: "100%" }}>
-              <a href="tel:01062986609">010-6298-6609</a>
+            <div
+              style={{
+                width: "100%",
+                overflow: "hidden",
+                whiteSpace: "no-wrap",
+              }}
+            >
+              <a style={{ textOverflow: "elipsis" }} href="tel:01062986609">
+                010-6298-6609
+              </a>
             </div>
           </figure>
           <figure
             className="callout"
-            style={{ whiteSpace: "pre-wrap", display: "flex", gap: "1rem" }}
+            style={{
+              minWidth: "fit-content",
+              display: "flex",
+              gap: "1rem",
+            }}
             id="c5fad15e-f188-4c3f-964b-48833ba0001a"
           >
             <div
@@ -88,13 +102,28 @@ const Resume = () => {
                 src={`${process.env.PUBLIC_URL}/Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/velogLogo.jpeg`}
               />
             </div>
-            <div style={{ width: "100%" }}>
-              <a href="https://velog.io/@4ggie97">https://velog.io/@4ggie97</a>
+            <div
+              style={{
+                width: "100%",
+                overflow: "hidden",
+                whiteSpace: "no-wrap",
+              }}
+            >
+              <a
+                style={{ textOverflow: "elipsis" }}
+                href="https://velog.io/@4ggie97"
+              >
+                https://velog.io/@4ggie97
+              </a>
             </div>
           </figure>
           <figure
             className="callout"
-            style={{ whiteSpace: "pre-wrap", display: "flex", gap: "1rem" }}
+            style={{
+              minWidth: "fit-content",
+              display: "flex",
+              gap: "1rem",
+            }}
             id="174d319b-a590-4c68-a3d4-f5e06e1cc5f0"
           >
             <div
@@ -109,13 +138,28 @@ const Resume = () => {
                 src={`${process.env.PUBLIC_URL}/Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/%EC%BA%A1%EC%B2%98.png`}
               />
             </div>
-            <div style={{ width: "100%" }}>
-              <a href="mailto:4ggie97@gmail.com">4ggie97@gmail.com</a>
+            <div
+              style={{
+                width: "100%",
+                overflow: "hidden",
+                whiteSpace: "no-wrap",
+              }}
+            >
+              <a
+                style={{ textOverflow: "elipsis" }}
+                href="mailto:4ggie97@gmail.com"
+              >
+                4ggie97@gmail.com
+              </a>
             </div>
           </figure>
           <figure
             className="callout"
-            style={{ whiteSpace: "pre-wrap", display: "flex", gap: "1rem" }}
+            style={{
+              width: "25%",
+              display: "flex",
+              gap: "1rem",
+            }}
             id="0d6f5cfb-1ded-42ac-9077-af3a04dbaa63"
           >
             <div
@@ -130,8 +174,17 @@ const Resume = () => {
                 src="https://super.so/icon/dark/github.svg"
               />
             </div>
-            <div style={{ width: "100%" }}>
-              <a href="https://github.com/aggie97">
+            <div
+              style={{
+                width: "100%",
+                overflow: "hidden",
+                whiteSpace: "no-wrap",
+              }}
+            >
+              <a
+                style={{ textOverflow: "elipsis" }}
+                href="https://github.com/aggie97"
+              >
                 https://github.com/aggie97
               </a>
             </div>
@@ -165,7 +218,7 @@ const Resume = () => {
                 <div>
                   <img
                     src={`https://skillicons.dev/icons?i=html&theme=${
-                      isDarkMode ? "dark" : "light"
+                      isDarkMode ? "light" : "dark"
                     }`}
                     alt="html"
                     style={{ width: "1.5rem" }}
@@ -173,29 +226,6 @@ const Resume = () => {
                 </div>
                 <span>HTML</span>
               </div>
-              {/* <div
-              id="7db81039-33bb-4c3f-95fa-7a6ac572ce25"
-              style={{ width: "100%" }}
-              className="column"
-            >
-              <ul
-                id="028d26ec-6e2c-4517-bdf5-f910cbe760a0"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  검색 엔진 최적화와 웹 접근성을 위한 시멘틱 태그를 사용하고
-                  있습니다.
-                </li>
-              </ul>
-              <ul
-                id="9cac1f7d-59cd-40c4-823b-de7b4f8a95c0"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  간단한 기능은 해당 기능을 가진 태그로 구현하려 합니다.
-                </li>
-              </ul>
-            </div> */}
             </figure>
           </div>
         </div>
@@ -217,7 +247,7 @@ const Resume = () => {
                 <p align="center">
                   <img
                     src={`https://skillicons.dev/icons?i=css&theme=${
-                      isDarkMode ? "dark" : "light"
+                      isDarkMode ? "light" : "dark"
                     }`}
                     alt="css"
                     style={{ width: "1.5rem" }}
@@ -225,30 +255,6 @@ const Resume = () => {
                 </p>
                 <span>CSS</span>
               </div>
-              {/* <div
-              id="1e37b4f6-68e8-4b88-b920-7cd9be4978af"
-              style={{ width: "100%" }}
-              className="column"
-            >
-              <ul
-                id="e3218da6-8ada-4f60-82a9-0ba3ec5c9b4a"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  다양한 선택자들을 숙지하고 cascade, specificity, inheritance를
-                  고려하여 적절하게 사용합니다.
-                </li>
-              </ul>
-              <ul
-                id="7e9ac25e-d4d2-4a2b-b2a8-a000d9aeb417"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  반응형 디자인을 위해 picture, srcset, media-query 등 여러 가지
-                  기법들을 상황에 맞게 사용합니다.
-                </li>
-              </ul>
-            </div> */}
             </figure>
           </div>
         </div>
@@ -274,7 +280,7 @@ const Resume = () => {
                 <p align="center">
                   <img
                     src={`https://skillicons.dev/icons?i=js&theme=${
-                      isDarkMode ? "dark" : "light"
+                      isDarkMode ? "light" : "dark"
                     }`}
                     alt="javascript"
                     style={{ width: "1.5rem" }}
@@ -282,29 +288,6 @@ const Resume = () => {
                 </p>
                 <span>JavaScript</span>
               </div>
-              {/* <div
-              id="d009bce1-f80d-4901-a2c5-fabfa6a28416"
-              style={{ width: "100%" }}
-              className="column"
-            >
-              <ul
-                id="7bbe9dc7-8050-41c6-87f8-9fea3c26b2c1"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  간결하면서 가독성이 좋은 코드를 작성하기 하기 위해 ES6+ 문법을
-                  숙지하고 사용하고 있습니다.
-                </li>
-              </ul>
-              <ul
-                id="0ea3a6c9-aeb2-4040-b997-b5a7ed4ba365"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  다양한 Web APIs를 익히면서 상황에 맞게 사용하고 있습니다.
-                </li>
-              </ul>
-            </div> */}
             </figure>
           </div>
         </div>
@@ -330,7 +313,7 @@ const Resume = () => {
                 <p align="center">
                   <img
                     src={`https://skillicons.dev/icons?i=ts&theme=${
-                      isDarkMode ? "dark" : "light"
+                      isDarkMode ? "light" : "dark"
                     }`}
                     alt="typescript"
                     style={{ width: "1.5rem" }}
@@ -338,29 +321,6 @@ const Resume = () => {
                 </p>
                 <span>TypeScript</span>
               </div>
-              {/* <div
-              id="6f1745e8-0c40-4cff-af29-a8d237ec4101"
-              style={{ width: "100%" }}
-              className="column"
-            >
-              <ul
-                id="36a95ccc-08ab-401b-b32d-e53a4fc5fdac"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  런타임에 암묵적 타입 변환으로 일어날 수 있는 에러를 방지하기
-                  위해 사용하고 있습니다.
-                </li>
-              </ul>
-              <ul
-                id="fb968ed0-89eb-483c-8a52-2781b7043d85"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  type과 interface의 차이를 이해하고 상황에 맞게 사용합니다.
-                </li>
-              </ul>
-            </div> */}
             </figure>
           </div>
         </div>
@@ -386,7 +346,7 @@ const Resume = () => {
                 <p align="center">
                   <img
                     src={`https://skillicons.dev/icons?i=react&theme=${
-                      isDarkMode ? "dark" : "light"
+                      isDarkMode ? "light" : "dark"
                     }`}
                     alt="react"
                     style={{ width: "1.5rem" }}
@@ -394,29 +354,6 @@ const Resume = () => {
                 </p>
                 <span>React</span>
               </div>
-              {/* <div
-              id="0eb0f441-877a-47df-9087-8f8ad2087554"
-              style={{ width: "100%" }}
-              className="column"
-            >
-              <ul
-                id="8603d331-634e-4bdb-b4f3-e70ff3f69048"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  함수형 컴포넌트와 React Hooks를 상황에 맞게 활용합니다.
-                </li>
-              </ul>
-              <ul
-                id="09258ebf-1861-4376-ad01-ac940b9222bb"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  원활한 유지보수와 협업을 위해 Container-Presenter패턴과
-                  Atomic패턴을 적절하게 섞어 활용해본 경험이 있습니다.
-                </li>
-              </ul>
-            </div> */}
             </figure>
           </div>
         </div>
@@ -442,7 +379,7 @@ const Resume = () => {
                 <p align="center">
                   <img
                     src={`https://skillicons.dev/icons?i=next&theme=${
-                      isDarkMode ? "dark" : "light"
+                      isDarkMode ? "light" : "dark"
                     }`}
                     alt="nextjs"
                     style={{ width: "1.5rem" }}
@@ -450,31 +387,6 @@ const Resume = () => {
                 </p>
                 <span>Next.js</span>
               </div>
-              {/* <div
-              id="a2a02974-b120-4176-8b0a-0fc4b9f87708"
-              style={{ width: "100%" }}
-              className="column"
-            >
-              <ul
-                id="86a66030-5400-4c18-9ac8-9c54ed75389c"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  SSR과 SPA의 장점들을 조합한 Next.js의 이점을 잘 알고 있으며,
-                  페이지별로 적절한 렌더링 방식을 채택하여 보여주기 위해
-                  사용하고 있습니다.{" "}
-                </li>
-              </ul>
-              <ul
-                id="dba09d5e-e520-4647-ac0e-2c60b31184a6"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  이미지와 폰트 최적화, 빠른 새로고침, 파일 라우팅 시스템 등
-                  내장 기능들을 최대한 활용하고 있습니다.
-                </li>
-              </ul>
-            </div> */}
             </figure>
           </div>
         </div>
@@ -500,7 +412,7 @@ const Resume = () => {
                 <p align="center">
                   <img
                     src={`https://skillicons.dev/icons?i=emotion&theme=${
-                      isDarkMode ? "dark" : "light"
+                      isDarkMode ? "light" : "dark"
                     }`}
                     alt="emotion"
                     style={{ width: "1.5rem" }}
@@ -508,34 +420,9 @@ const Resume = () => {
                 </p>
                 <span>Emotion</span>
               </div>
-              {/* <div
-              id="631c968b-70f6-4dfa-b46e-e0bd4e0760d5"
-              style={{ width: "100%" }}
-              className="column"
-            >
-              <ul
-                id="b004f590-303a-4a2f-aecc-5db883234a4f"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  동적인 스타일링 적용이 간편하고 Next.js와 잘 맞아서 사용하고
-                  있습니다.
-                </li>
-              </ul>
-              <ul
-                id="b004f590-303a-4a2f-aecc-5db883234a4f"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  컴포넌트 단위의 스타일 정의를 하고 css props를 이용한 유동적인
-                  스타일링을 할 때 사용합니다.
-                </li>
-              </ul>
-            </div> */}
             </figure>
           </div>
         </div>
-
         <div id="d42c3dd7-9c0e-42fa-be5c-4aa4a0e59707">
           <div
             id="7cb569af-5d45-43dc-966e-d536c9316879"
@@ -558,7 +445,7 @@ const Resume = () => {
                 <p align="center">
                   <img
                     src={`https://skillicons.dev/icons?i=github&theme=${
-                      isDarkMode ? "dark" : "light"
+                      isDarkMode ? "light" : "dark"
                     }`}
                     alt="github"
                     style={{ width: "1.5rem" }}
@@ -566,22 +453,6 @@ const Resume = () => {
                 </p>
                 <span>Git</span>
               </div>
-              {/* <div
-              id="5e5e9653-ca84-42d6-91d1-b2e5967740f8"
-              style={{ width: "100%" }}
-              className="column"
-            >
-              <ul
-                id="393db2d0-078b-4df1-babe-40a360c5aa32"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  프로젝트의 안정성을 높이기 위해 항상 커밋 메세지 컨벤션을
-                  정하고, 보다 더 직관적인 커밋 확인을 위한 Gitmoji를
-                  애용합니다.
-                </li>
-              </ul>
-            </div> */}
             </figure>
           </div>
         </div>
@@ -603,7 +474,7 @@ const Resume = () => {
                 <p align="center">
                   <img
                     src={`https://skillicons.dev/icons?i=docker&theme=${
-                      isDarkMode ? "dark" : "light"
+                      isDarkMode ? "light" : "dark"
                     }`}
                     alt="docker"
                     style={{ width: "1.5rem" }}
@@ -611,30 +482,6 @@ const Resume = () => {
                 </p>
                 <span>Docker</span>
               </div>
-              {/* <div
-              id="edfa7884-bc1a-4cb5-b59b-16f7af9d9434"
-              style={{ width: "100%" }}
-              className="column"
-            >
-              <ul
-                id="4eb6772c-75f1-4fb4-ba3d-42f05b35572a"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  REST의 Over-fetching, Under-fetching 등 단점을 보완하기 위해
-                  사용하고 있습니다.
-                </li>
-              </ul>
-              <ul
-                id="175d150f-572e-4c9c-8e70-ce93b3dfa20d"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  쿼리문을 적절하게 작성하고 반복되는 필드는 Fragment를 이용해
-                  재사용합니다.
-                </li>
-              </ul>
-            </div> */}
             </figure>
           </div>
         </div>
@@ -660,7 +507,7 @@ const Resume = () => {
                 <p align="center">
                   <img
                     src={`https://skillicons.dev/icons?i=gql&theme=${
-                      isDarkMode ? "dark" : "light"
+                      isDarkMode ? "light" : "dark"
                     }`}
                     alt="graphql"
                     style={{ width: "1.5rem" }}
@@ -668,30 +515,6 @@ const Resume = () => {
                 </p>
                 <span>GraphQL</span>
               </div>
-              {/* <div
-              id="edfa7884-bc1a-4cb5-b59b-16f7af9d9434"
-              style={{ width: "100%" }}
-              className="column"
-            >
-              <ul
-                id="4eb6772c-75f1-4fb4-ba3d-42f05b35572a"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  REST의 Over-fetching, Under-fetching 등 단점을 보완하기 위해
-                  사용하고 있습니다.
-                </li>
-              </ul>
-              <ul
-                id="175d150f-572e-4c9c-8e70-ce93b3dfa20d"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  쿼리문을 적절하게 작성하고 반복되는 필드는 Fragment를 이용해
-                  재사용합니다.
-                </li>
-              </ul>
-            </div> */}
             </figure>
           </div>
         </div>
@@ -717,7 +540,7 @@ const Resume = () => {
                 <p align="center">
                   <img
                     src={`https://skillicons.dev/icons?i=apollo&theme=${
-                      isDarkMode ? "dark" : "light"
+                      isDarkMode ? "light" : "dark"
                     }`}
                     alt="apollo"
                     style={{ width: "1.5rem" }}
@@ -725,30 +548,6 @@ const Resume = () => {
                 </p>
                 <span>Apollo-Client</span>
               </div>
-              {/* <div
-              id="edfa7884-bc1a-4cb5-b59b-16f7af9d9434"
-              style={{ width: "100%" }}
-              className="column"
-            >
-              <ul
-                id="4eb6772c-75f1-4fb4-ba3d-42f05b35572a"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  REST의 Over-fetching, Under-fetching 등 단점을 보완하기 위해
-                  사용하고 있습니다.
-                </li>
-              </ul>
-              <ul
-                id="175d150f-572e-4c9c-8e70-ce93b3dfa20d"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  쿼리문을 적절하게 작성하고 반복되는 필드는 Fragment를 이용해
-                  재사용합니다.
-                </li>
-              </ul>
-            </div> */}
             </figure>
           </div>
         </div>
@@ -770,7 +569,7 @@ const Resume = () => {
                 <p align="center">
                   <img
                     src={`https://skillicons.dev/icons?i=aws&theme=${
-                      isDarkMode ? "dark" : "light"
+                      isDarkMode ? "light" : "dark"
                     }`}
                     alt="aws"
                     style={{ width: "1.5rem" }}
@@ -778,30 +577,6 @@ const Resume = () => {
                 </p>
                 <span>Amazon Web Service</span>
               </div>
-              {/* <div
-              id="edfa7884-bc1a-4cb5-b59b-16f7af9d9434"
-              style={{ width: "100%" }}
-              className="column"
-            >
-              <ul
-                id="4eb6772c-75f1-4fb4-ba3d-42f05b35572a"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  REST의 Over-fetching, Under-fetching 등 단점을 보완하기 위해
-                  사용하고 있습니다.
-                </li>
-              </ul>
-              <ul
-                id="175d150f-572e-4c9c-8e70-ce93b3dfa20d"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  쿼리문을 적절하게 작성하고 반복되는 필드는 Fragment를 이용해
-                  재사용합니다.
-                </li>
-              </ul>
-            </div> */}
             </figure>
           </div>
         </div>
@@ -823,7 +598,7 @@ const Resume = () => {
                 <p align="center">
                   <img
                     src={`https://skillicons.dev/icons?i=gcp&theme=${
-                      isDarkMode ? "dark" : "light"
+                      isDarkMode ? "light" : "dark"
                     }`}
                     alt="aws"
                     style={{ width: "1.5rem" }}
@@ -831,30 +606,6 @@ const Resume = () => {
                 </p>
                 <span>Google Cloud Platform</span>
               </div>
-              {/* <div
-              id="edfa7884-bc1a-4cb5-b59b-16f7af9d9434"
-              style={{ width: "100%" }}
-              className="column"
-            >
-              <ul
-                id="4eb6772c-75f1-4fb4-ba3d-42f05b35572a"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  REST의 Over-fetching, Under-fetching 등 단점을 보완하기 위해
-                  사용하고 있습니다.
-                </li>
-              </ul>
-              <ul
-                id="175d150f-572e-4c9c-8e70-ce93b3dfa20d"
-                className="bulleted-list"
-              >
-                <li style={{ listStyleType: "disc" }}>
-                  쿼리문을 적절하게 작성하고 반복되는 필드는 Fragment를 이용해
-                  재사용합니다.
-                </li>
-              </ul>
-            </div> */}
             </figure>
           </div>
         </div>
@@ -903,14 +654,17 @@ const Resume = () => {
       <div style={{ marginBottom: "1.5rem" }}>
         <div className="exp_header">
           <span>Front-End Dev</span>
-          <span>Used Market(Team Project)</span>
-          <span>2022.10.27 ~ 2022.11.22</span>
+          <span>Used Market(Personal Project)</span>
+          <span>2022.08.27 ~ 2022.09.30</span>
         </div>
         <div>
           <ul>
             <li></li>
             <li></li>
             <li></li>
+            <li>재사용성 높은 컴포넌트 설계</li>
+            <li>모듈, 파일 단위의 관심사 분리로 유지보수 개선</li>
+            <li>yup을 통한 form의 유효성 검증 간편화</li>
           </ul>
         </div>
       </div>

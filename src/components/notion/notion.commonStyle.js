@@ -103,6 +103,10 @@ export const NotionCommonStyles = styled.div`
     font-size: 1.25rem;
     font-weight: bold;
     padding: 0.5rem;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
 
   figure {
@@ -181,6 +185,7 @@ export const NotionCommonStyles = styled.div`
   }
 
   .contact {
+    margin-top: 1rem;
     @media (max-width: 768px) {
       flex-direction: column;
     }
