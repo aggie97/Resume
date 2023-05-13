@@ -14,7 +14,7 @@ const Portfolio = () => {
               <strong>ONF(On And Off)</strong>
             </span>
             <strong> :</strong>
-            <mark className="highlight-gray">Team Project</mark>
+            Team Project
           </h3>
           <p id="54656f97-32b1-4420-a61c-6ce76c800c44">
             근태관리 솔루션 Shiftee 클론 사이드 프로젝트
@@ -25,7 +25,7 @@ const Portfolio = () => {
             </a>
           </figure>
           <p id="d115ec2f-c5b3-4458-822c-10c98ceefc61">
-            <mark>기간 : 2022.11.28 ~ 2023.01.27(1차 마무리)</mark>
+            기간 : 2022.11.28 ~ 2023.01.27
           </p>
           <div
             id="d329cbd4-6890-468d-b3ba-27b6ac6c229f"
@@ -127,8 +127,8 @@ const Portfolio = () => {
           </ul>
           <hr id="6108bd47-e6b8-4251-ab14-a8195fffb9e9" />
           <h2 id="4705c22c-66e4-409e-80cb-e75e84193953">
-            <span style={{ borderBottom: "0.05em solid" }}>BUSKER</span> :
-            <mark className="highlight-gray">Team Project</mark>
+            <span style={{ borderBottom: "0.05em solid" }}>BUSKER</span> : Team
+            Project
           </h2>
           <p id="59a39d5e-5250-4b01-8537-c4bddf5126ad">
             버스커와 버스킹을 즐기는 관객들을 이어주는 버스킹 위치 정보 제공
@@ -168,7 +168,7 @@ const Portfolio = () => {
           </figure>
           <div style={{ padding: "1rem 0" }}>
             <p id="d115ec2f-c5b3-4458-822c-10c98ceefc61">
-              <mark>기간 : 2022.10.27 ~ 2022.11.22</mark>
+              기간 : 2022.10.27 ~ 2022.11.22
             </p>
             <img
               src={`${process.env.PUBLIC_URL}/buskerLanding.webp`}
@@ -355,7 +355,7 @@ const Portfolio = () => {
           <hr id="d79fad9b-36a2-4e47-bb29-3e66986e7a11" />
           <h2 id="f3284635-19ca-4229-b2ac-00049e1c08fb">
             <span style={{ borderBottom: "0.05em solid" }}>중고마켓</span> :
-            <mark className="highlight-gray">Personal Project</mark>
+            Personal Project
           </h2>
           <p id="17c93db2-8eb0-4866-a518-54d90a4571a9">
             부트 캠프에서 8주 동안 학습을 병행하며 만들었던 간단한 문의 게시판
@@ -369,7 +369,7 @@ const Portfolio = () => {
           </figure>
           <div>
             <p id="d115ec2f-c5b3-4458-822c-10c98ceefc61">
-              <mark>기간 : 2022.08.27 ~ 2022.09.30</mark>
+              기간 : 2022.08.27 ~ 2022.09.30
             </p>
             <img
               src={`${process.env.PUBLIC_URL}/usedMarketMain.webp`}

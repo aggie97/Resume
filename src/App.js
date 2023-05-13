@@ -1,7 +1,7 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import AnimatedRoutes from "./components/AnimatedRoutes";
 import { ThemeProvider } from "@emotion/react";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import ThemeWrapper from "./components/common/ThemeWrapper";
 
 const theme = {

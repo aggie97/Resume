@@ -19,7 +19,8 @@ const Wrapper = styled.div`
     props.isDarkMode
       ? props.theme.darkModeBackgroundColor
       : props.theme.lightModeBackgroundColor};
-  hr {
+  hr,
+  mark::after {
     background-color: ${(props) =>
       props.isDarkMode
         ? props.theme.lightModeBackgroundColor

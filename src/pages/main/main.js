@@ -11,6 +11,10 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
   const [isDarkMode, toggleMode] = useDarkMode();
 
   useEffect(() => {
+    navigator("./resume");
+  }, []);
+
+  useEffect(() => {
     setIsNavMode(() => location.pathname !== `/`);
   }, [location.pathname, setIsNavMode]);
 

@@ -1,8 +1,4 @@
-import React, { useState } from "react";
-import { useDarkMode } from "../../App";
 const Resume = () => {
-  const [isDarkMode] = useDarkMode();
-  const [open, setOpen] = useState(false);
   return (
     <div>
       <header>
@@ -12,22 +8,56 @@ const Resume = () => {
       <div id="bd2541d5-de67-4a6b-b006-4ed59d7f32ac" className="column-list">
         <div id="f878198f-0152-4db6-b025-cf6f5ab56e79" className="column">
           <h3
-            style={{ marginBottom: "0.5rem" }}
+            style={{ marginBottom: "1rem" }}
             id="6821b454-3916-499d-b03b-0c49e8b284b9"
           >
-            함께 하기 위해 무한 고민하는 프론트엔드 개발자, 김민겸입니다.
+            함께 하기 위해 무한 고민하는 프론트엔드 개발자입니다.
           </h3>
-          <p id="1592e4b0-a127-4fd2-a4d4-b098c45c2485">
-            비개발직군들과는 <strong>코드보다 이해하기 쉬운 말로</strong>,
-            <br />
-            개발직군들과는 <strong>말보다 가독성이 좋은 코드로</strong>
-            <br /> 소통하는 것에 가치를 두고,
-            <br />
-            <p>
-              <strong>불확실한 기억보단 확실한 기록을</strong> 하는 개발자를
-              지향하고 있습니다.
-            </p>
-          </p>
+          <div id="10e1d97f-85ca-45e5-9777-36eb2bebaebf" className="contact">
+            <ul
+              id="2acf0b24-753a-4c04-b83f-7c78ac56f5d9"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.25rem",
+                paddingLeft: "1rem",
+              }}
+              className="column"
+            >
+              <li>
+                <span style={{ display: "inline-block", width: "5rem" }}>
+                  성명
+                </span>
+                김민겸
+              </li>
+              <li>
+                <span style={{ display: "inline-block", width: "5rem" }}>
+                  생년월일
+                </span>
+                1997년 08월 01일
+              </li>
+              <li>
+                <span style={{ display: "inline-block", width: "5rem" }}>
+                  전화번호{" "}
+                </span>
+                010-6298-6609
+              </li>
+              <li>
+                <span style={{ display: "inline-block", width: "5rem" }}>
+                  이메일{" "}
+                </span>
+                <a href="mailto:4ggie97@gmail.com">4ggie97@gmail.com</a>
+              </li>
+              <li>
+                <span style={{ display: "inline-block", width: "5rem" }}>
+                  깃허브{" "}
+                </span>
+                <a href="https://github.com/aggie97">
+                  https://github.com/aggie97
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div id="aa6de163-fd60-4197-9422-24482ca247d3" className="column">
           <figure id="cc598b2e-ac1e-49ea-9ea4-770a8c7a9237" className="image">
@@ -39,166 +69,20 @@ const Resume = () => {
           </figure>
         </div>
       </div>
-      <div id="10e1d97f-85ca-45e5-9777-36eb2bebaebf" className="contact">
-        <div
-          id="2acf0b24-753a-4c04-b83f-7c78ac56f5d9"
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-          }}
-          className="column"
-        >
-          <figure
-            className="callout"
-            style={{
-              minWidth: "fit-content",
-              display: "flex",
-              gap: "1rem",
-            }}
-            id="a8ef0e8e-fa00-4131-b600-95f3aeb93500"
-          >
-            <div
-              style={{
-                width: "1.5rem",
-                aspectRatio: "1 / 1",
-              }}
-            >
-              <img
-                className="icon"
-                alt="telephone"
-                src={`${process.env.PUBLIC_URL}/telephone-call.png`}
-              />
-            </div>
-            <div
-              style={{
-                width: "100%",
-                overflow: "hidden",
-                whiteSpace: "no-wrap",
-              }}
-            >
-              <a style={{ textOverflow: "elipsis" }} href="tel:01062986609">
-                010-6298-6609
-              </a>
-            </div>
-          </figure>
-          <figure
-            className="callout"
-            style={{
-              minWidth: "fit-content",
-              display: "flex",
-              gap: "1rem",
-            }}
-            id="c5fad15e-f188-4c3f-964b-48833ba0001a"
-          >
-            <div
-              style={{
-                width: "1.5rem",
-                aspectRatio: "1 / 1",
-              }}
-            >
-              <img
-                alt={"test"}
-                className="icon"
-                src={`${process.env.PUBLIC_URL}/Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/velogLogo.jpeg`}
-              />
-            </div>
-            <div
-              style={{
-                width: "100%",
-                overflow: "hidden",
-                whiteSpace: "no-wrap",
-              }}
-            >
-              <a
-                style={{ textOverflow: "elipsis" }}
-                href="https://velog.io/@4ggie97"
-              >
-                https://velog.io/@4ggie97
-              </a>
-            </div>
-          </figure>
-          <figure
-            className="callout"
-            style={{
-              minWidth: "fit-content",
-              display: "flex",
-              gap: "1rem",
-            }}
-            id="174d319b-a590-4c68-a3d4-f5e06e1cc5f0"
-          >
-            <div
-              style={{
-                width: "1.5rem",
-                aspectRatio: "1 / 1",
-              }}
-            >
-              <img
-                alt={"test"}
-                className="icon"
-                src={`${process.env.PUBLIC_URL}/Resume%20d03cbcad0f2a4711ab1ea3c85a3ff442/%EC%BA%A1%EC%B2%98.png`}
-              />
-            </div>
-            <div
-              style={{
-                width: "100%",
-                overflow: "hidden",
-                whiteSpace: "no-wrap",
-              }}
-            >
-              <a
-                style={{ textOverflow: "elipsis" }}
-                href="mailto:4ggie97@gmail.com"
-              >
-                4ggie97@gmail.com
-              </a>
-            </div>
-          </figure>
-          <figure
-            className="callout"
-            style={{
-              width: "25%",
-              display: "flex",
-              gap: "1rem",
-            }}
-            id="0d6f5cfb-1ded-42ac-9077-af3a04dbaa63"
-          >
-            <div
-              style={{
-                width: "1.5rem",
-                aspectRatio: "1 / 1",
-              }}
-            >
-              <img
-                alt={"test"}
-                className="icon"
-                src="https://super.so/icon/dark/github.svg"
-              />
-            </div>
-            <div
-              style={{
-                width: "100%",
-                overflow: "hidden",
-                whiteSpace: "no-wrap",
-              }}
-            >
-              <a
-                style={{ textOverflow: "elipsis" }}
-                href="https://github.com/aggie97"
-              >
-                https://github.com/aggie97
-              </a>
-            </div>
-          </figure>
-        </div>
-      </div>
+
       <h1
         style={{ margin: "1rem 0" }}
         id="f90425a4-2915-47a3-aa55-24431a221221"
       >
-        <mark>Skills </mark>
+        <mark>Skills</mark>
       </h1>
       <div
-        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          width: "100%",
+          gap: "0.5rem",
+        }}
       >
         <div id="bbbe0913-f263-4f07-bdae-7b29c32efabc">
           <div id="b6d8a008-f9ea-495d-927e-b639085584de" className="column">
@@ -207,25 +91,7 @@ const Resume = () => {
               style={{ whiteSpace: "pre-wrap", display: "flex" }}
               id="b1cda534-0464-4f26-b311-4121958e8c58"
             >
-              <div
-                style={{
-                  textAlign: "center",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.25rem",
-                }}
-              >
-                <div>
-                  <img
-                    src={`https://skillicons.dev/icons?i=html&theme=${
-                      isDarkMode ? "light" : "dark"
-                    }`}
-                    alt="html"
-                    style={{ width: "1.5rem" }}
-                  />
-                </div>
-                <span>HTML</span>
-              </div>
+              <span>HTML</span>
             </figure>
           </div>
         </div>
@@ -236,25 +102,7 @@ const Resume = () => {
               style={{ whiteSpace: "pre-wrap", display: "flex" }}
               id="95a739ba-81fe-45ba-86dc-99873586c66a"
             >
-              <div
-                style={{
-                  textAlign: "center",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.25rem",
-                }}
-              >
-                <p align="center">
-                  <img
-                    src={`https://skillicons.dev/icons?i=css&theme=${
-                      isDarkMode ? "light" : "dark"
-                    }`}
-                    alt="css"
-                    style={{ width: "1.5rem" }}
-                  />
-                </p>
-                <span>CSS</span>
-              </div>
+              <span>CSS</span>
             </figure>
           </div>
         </div>
@@ -269,25 +117,7 @@ const Resume = () => {
               style={{ whiteSpace: "pre-wrap", display: "flex" }}
               id="9ce398b7-68a1-4ac6-ac96-3536d4f72e57"
             >
-              <div
-                style={{
-                  textAlign: "center",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.25rem",
-                }}
-              >
-                <p align="center">
-                  <img
-                    src={`https://skillicons.dev/icons?i=js&theme=${
-                      isDarkMode ? "light" : "dark"
-                    }`}
-                    alt="javascript"
-                    style={{ width: "1.5rem" }}
-                  />
-                </p>
-                <span>JavaScript</span>
-              </div>
+              <span>JavaScript</span>
             </figure>
           </div>
         </div>
@@ -302,25 +132,7 @@ const Resume = () => {
               style={{ whiteSpace: "pre-wrap", display: "flex" }}
               id="3237b10c-a7a8-49e6-b194-fb5584fc896f"
             >
-              <div
-                style={{
-                  textAlign: "center",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.25rem",
-                }}
-              >
-                <p align="center">
-                  <img
-                    src={`https://skillicons.dev/icons?i=ts&theme=${
-                      isDarkMode ? "light" : "dark"
-                    }`}
-                    alt="typescript"
-                    style={{ width: "1.5rem" }}
-                  />
-                </p>
-                <span>TypeScript</span>
-              </div>
+              <span>TypeScript</span>
             </figure>
           </div>
         </div>
@@ -335,25 +147,7 @@ const Resume = () => {
               style={{ whiteSpace: "pre-wrap", display: "flex" }}
               id="562cd031-a837-4071-909d-9d910d2fb56a"
             >
-              <div
-                style={{
-                  textAlign: "center",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.25rem",
-                }}
-              >
-                <p align="center">
-                  <img
-                    src={`https://skillicons.dev/icons?i=react&theme=${
-                      isDarkMode ? "light" : "dark"
-                    }`}
-                    alt="react"
-                    style={{ width: "1.5rem" }}
-                  />
-                </p>
-                <span>React</span>
-              </div>
+              <span>React</span>
             </figure>
           </div>
         </div>
@@ -368,25 +162,7 @@ const Resume = () => {
               style={{ whiteSpace: "pre-wrap", display: "flex" }}
               id="f6135c99-db04-4490-a9c4-e7af9fffb62c"
             >
-              <div
-                style={{
-                  textAlign: "center",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.25rem",
-                }}
-              >
-                <p align="center">
-                  <img
-                    src={`https://skillicons.dev/icons?i=next&theme=${
-                      isDarkMode ? "light" : "dark"
-                    }`}
-                    alt="nextjs"
-                    style={{ width: "1.5rem" }}
-                  />
-                </p>
-                <span>Next.js</span>
-              </div>
+              <span>Next.js</span>
             </figure>
           </div>
         </div>
@@ -401,25 +177,7 @@ const Resume = () => {
               style={{ whiteSpace: "pre-wrap", display: "flex" }}
               id="e60199b4-71fc-426a-bc00-ff862a8a9cc9"
             >
-              <div
-                style={{
-                  textAlign: "center",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.25rem",
-                }}
-              >
-                <p align="center">
-                  <img
-                    src={`https://skillicons.dev/icons?i=emotion&theme=${
-                      isDarkMode ? "light" : "dark"
-                    }`}
-                    alt="emotion"
-                    style={{ width: "1.5rem" }}
-                  />
-                </p>
-                <span>Emotion</span>
-              </div>
+              <span>Emotion</span>
             </figure>
           </div>
         </div>
@@ -434,25 +192,7 @@ const Resume = () => {
               style={{ whiteSpace: "pre-wrap", display: "flex" }}
               id="4280a2dc-8adc-4442-899b-6b3fa856ffd2"
             >
-              <div
-                style={{
-                  textAlign: "center",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.25rem",
-                }}
-              >
-                <p align="center">
-                  <img
-                    src={`https://skillicons.dev/icons?i=github&theme=${
-                      isDarkMode ? "light" : "dark"
-                    }`}
-                    alt="github"
-                    style={{ width: "1.5rem" }}
-                  />
-                </p>
-                <span>Git</span>
-              </div>
+              <span>Git</span>
             </figure>
           </div>
         </div>
@@ -463,25 +203,7 @@ const Resume = () => {
               style={{ whiteSpace: "pre-wrap", display: "flex" }}
               id="ec3a8e66-a8dc-46f7-8f7f-8d63d364ad7a"
             >
-              <div
-                style={{
-                  textAlign: "center",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.25rem",
-                }}
-              >
-                <p align="center">
-                  <img
-                    src={`https://skillicons.dev/icons?i=docker&theme=${
-                      isDarkMode ? "light" : "dark"
-                    }`}
-                    alt="docker"
-                    style={{ width: "1.5rem" }}
-                  />
-                </p>
-                <span>Docker</span>
-              </div>
+              <span>Docker</span>
             </figure>
           </div>
         </div>
@@ -496,25 +218,22 @@ const Resume = () => {
               style={{ whiteSpace: "pre-wrap", display: "flex" }}
               id="ec3a8e66-a8dc-46f7-8f7f-8d63d364ad7a"
             >
-              <div
-                style={{
-                  textAlign: "center",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.25rem",
-                }}
-              >
-                <p align="center">
-                  <img
-                    src={`https://skillicons.dev/icons?i=gql&theme=${
-                      isDarkMode ? "light" : "dark"
-                    }`}
-                    alt="graphql"
-                    style={{ width: "1.5rem" }}
-                  />
-                </p>
-                <span>GraphQL</span>
-              </div>
+              <span>Rest API</span>
+            </figure>
+          </div>
+        </div>
+        <div id="41808c78-ceea-490f-b820-39224e4f56d4">
+          <div
+            id="d1e61219-b8e1-4c36-bb91-54b97f1bfb25"
+            style={{ width: "100%" }}
+            className="column"
+          >
+            <figure
+              className="callout"
+              style={{ whiteSpace: "pre-wrap", display: "flex" }}
+              id="ec3a8e66-a8dc-46f7-8f7f-8d63d364ad7a"
+            >
+              <span>GraphQL</span>
             </figure>
           </div>
         </div>
@@ -529,25 +248,7 @@ const Resume = () => {
               style={{ whiteSpace: "pre-wrap", display: "flex" }}
               id="ec3a8e66-a8dc-46f7-8f7f-8d63d364ad7a"
             >
-              <div
-                style={{
-                  textAlign: "center",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.25rem",
-                }}
-              >
-                <p align="center">
-                  <img
-                    src={`https://skillicons.dev/icons?i=apollo&theme=${
-                      isDarkMode ? "light" : "dark"
-                    }`}
-                    alt="apollo"
-                    style={{ width: "1.5rem" }}
-                  />
-                </p>
-                <span>Apollo-Client</span>
-              </div>
+              <span>Apollo-Client</span>
             </figure>
           </div>
         </div>
@@ -558,25 +259,7 @@ const Resume = () => {
               style={{ whiteSpace: "pre-wrap", display: "flex" }}
               id="ec3a8e66-a8dc-46f7-8f7f-8d63d364ad7a"
             >
-              <div
-                style={{
-                  textAlign: "center",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.25rem",
-                }}
-              >
-                <p align="center">
-                  <img
-                    src={`https://skillicons.dev/icons?i=aws&theme=${
-                      isDarkMode ? "light" : "dark"
-                    }`}
-                    alt="aws"
-                    style={{ width: "1.5rem" }}
-                  />
-                </p>
-                <span>Amazon Web Service</span>
-              </div>
+              <span>Amazon Web Service</span>
             </figure>
           </div>
         </div>
@@ -587,25 +270,7 @@ const Resume = () => {
               style={{ whiteSpace: "pre-wrap", display: "flex" }}
               id="ec3a8e66-a8dc-46f7-8f7f-8d63d364ad7a"
             >
-              <div
-                style={{
-                  textAlign: "center",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.25rem",
-                }}
-              >
-                <p align="center">
-                  <img
-                    src={`https://skillicons.dev/icons?i=gcp&theme=${
-                      isDarkMode ? "light" : "dark"
-                    }`}
-                    alt="aws"
-                    style={{ width: "1.5rem" }}
-                  />
-                </p>
-                <span>Google Cloud Platform</span>
-              </div>
+              <span>Google Cloud Platform</span>
             </figure>
           </div>
         </div>
@@ -619,7 +284,19 @@ const Resume = () => {
       <div style={{ marginBottom: "1.5rem" }}>
         <div className="exp_header">
           <span>Front-End Dev</span>
-          <span>ONF(Team Project)</span>
+          <a
+            href="https://github.com/Dev-One-Project/ONF-client"
+            rel="noreferrer"
+            target="_blank"
+            style={{ display: "flex" }}
+          >
+            ONF(Team Project)
+            <img
+              src={`${process.env.PUBLIC_URL}/link.png`}
+              alt="Github Client Repository"
+              className="link-image"
+            />
+          </a>
           <span>2022.11.28 ~ 2023.01.27</span>
         </div>
         <div>
@@ -636,7 +313,19 @@ const Resume = () => {
       <div style={{ marginBottom: "1.5rem" }}>
         <div className="exp_header">
           <span>Front-End Dev</span>
-          <span>BUSKER(Team Project)</span>
+          <a
+            href="https://github.com/code-bootcamp/BUSKER_client"
+            rel="noreferrer"
+            style={{ display: "flex" }}
+            target="_blank"
+          >
+            BUSKER(Team Project)
+            <img
+              src={`${process.env.PUBLIC_URL}/link.png`}
+              alt="Github Client Repository"
+              className="link-image"
+            />
+          </a>
           <span>2022.10.27 ~ 2022.11.22</span>
         </div>
         <div>
@@ -646,28 +335,27 @@ const Resume = () => {
             <li>GCP Docker 배포</li>
             <li>Front Git 관리 (Commit-Convention, Code-Review) 주도</li>
             <li>반응형 웹 개발 주도</li>
-            <li>타 직군(디자이너)과의 소통 주도</li>
-            <li>와이어 프레임 제작</li>
+            <li>디자이너와 소통 주도</li>
+            <li>
+              <a
+                href="https://whimsical.com/busker-RNydqiscsdKJCvXXKX8Wjy"
+                rel="noreferrer"
+                target="_blank"
+                style={{ display: "flex" }}
+              >
+                와이어 프레임( Whimsical
+                <img
+                  src={`${process.env.PUBLIC_URL}/link.png`}
+                  alt="Github Client Repository"
+                  className="link-image"
+                />
+                ) 제작
+              </a>
+            </li>
           </ul>
         </div>
       </div>
-      <div style={{ marginBottom: "1.5rem" }}>
-        <div className="exp_header">
-          <span>Front-End Dev</span>
-          <span>Used Market(Personal Project)</span>
-          <span>2022.08.27 ~ 2022.09.30</span>
-        </div>
-        <div>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li>재사용성 높은 컴포넌트 설계</li>
-            <li>모듈, 파일 단위의 관심사 분리로 유지보수 개선</li>
-            <li>yup을 통한 form의 유효성 검증 간편화</li>
-          </ul>
-        </div>
-      </div>
+      {/* 
       <h1 style={{ margin: "1rem 0" }}>
         <mark>About</mark>
       </h1>
@@ -713,9 +401,9 @@ const Resume = () => {
             되었습니다.
           </p>
         </div>
-      </div>
+      </div> */}
       <h1 id="3eb2286e-0415-455e-91de-5ac2eaa9f554">
-        <mark>Career</mark>
+        <mark>Education</mark>
       </h1>
       <div
         id="8ba98b32-bfcc-467b-94d6-531b2fca30f9"
@@ -759,8 +447,11 @@ const Resume = () => {
                 <span className="selected-value">코드캠프 FE 코스 9기</span>
               </td>
               <td data-cell="내용" className="cell-Kfg">
-                TypeScript, React.js, Next.js, Emotion, GraphQL, Apollo-Client,
-                Recoil까지 프론트엔드 개발 전반에 대한 교육
+                TypeScript, React, Next.js, Emotion, GraphQL, Apollo-Client,
+                Recoil, Docker, 알고리즘 학습으로 프론트 엔드 개발 역량과 AWS,
+                GCP 클라우드 플랫폼을 통한 배포 그리고 매주 진행되는 코드 리뷰와
+                최종 팀 프로젝트를 통한 협업을 배울 수 있는 3개월 과정의 부트
+                캠프
               </td>
               <td data-cell="기관명" className="cell-PU">
                 <a
@@ -861,10 +552,10 @@ const Resume = () => {
                 2016.03.01~2023.2.14
               </td>
               <td data-cell="교육명" className="cell-title">
-                <span className="selected-value">전자 및 통신 공학</span>
+                <span className="selected-value">울산과학대학교</span>
               </td>
               <td data-cell="내용" className="cell-Kfg">
-                3년제 전문 학사 과정
+                3년제 전문 학사 전자 및 통신 공학 전공
               </td>
               <td data-cell="기관명" className="cell-PU">
                 울산과학대학교
