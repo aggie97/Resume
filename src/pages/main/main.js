@@ -5,14 +5,17 @@ import { motion } from "framer-motion";
 import { css } from "@emotion/react";
 import { useDarkMode } from "../../App";
 
+let flag = false;
 const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
   const location = useLocation();
   const navigator = useNavigate();
   const [isDarkMode, toggleMode] = useDarkMode();
-
   useEffect(() => {
-    navigator("./resume");
-  }, []);
+    if (!flag) {
+      navigator("./resume");
+      flag = true;
+    }
+  }, [navigator]);
 
   useEffect(() => {
     setIsNavMode(() => location.pathname !== `/`);
