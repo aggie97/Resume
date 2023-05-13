@@ -10,6 +10,7 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
   const location = useLocation();
   const navigator = useNavigate();
   const [isDarkMode, toggleMode] = useDarkMode();
+
   useEffect(() => {
     if (!flag) {
       navigator("./resume");
@@ -79,6 +80,7 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
           </Icons>
           <GitGrass>
             <img
+              decoding="async"
               src="https://ghchart.rshah.org/aggie97"
               alt="github_contribution_graph"
             />
@@ -93,15 +95,42 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
           <img src={`${process.env.PUBLIC_URL}/sun.png`} alt="lightmode" />
         )}
       </ToggleButtonBox>
-      <img
-        style={{ display: "none" }}
-        src={`${
-          isDarkMode
-            ? `${process.env.PUBLIC_URL}/summer.jpeg`
-            : `${process.env.PUBLIC_URL}/summer-dark.jpeg`
-        }`}
-        alt="reverse-prefer-color"
-      />
+      <BackgroundImageBox>
+        <picture>
+          <source
+            className={`backgroundImage ${isDarkMode ? "gone" : "come"}`}
+            srcSet={`${process.env.PUBLIC_URL}/summer.avif`}
+            type="image/avif"
+          />
+          <source
+            className={`backgroundImage ${isDarkMode ? "gone" : "come"}`}
+            srcSet={`${process.env.PUBLIC_URL}/summer.webp`}
+            type="image/webp"
+          />
+          <img
+            className={`backgroundImage ${isDarkMode ? "gone" : "come"}`}
+            src={`${process.env.PUBLIC_URL}/summer.jpeg`}
+            alt=""
+          />
+        </picture>
+        <picture>
+          <source
+            className={`backgroundImage ${isDarkMode ? "come" : "gone"}`}
+            srcSet={`${process.env.PUBLIC_URL}/summer-dark.avif`}
+            type="image/avif"
+          />
+          <source
+            className={`backgroundImage ${isDarkMode ? "come" : "gone"}`}
+            srcSet={`${process.env.PUBLIC_URL}/summer-dark.webp`}
+            type="image/webp"
+          />
+          <img
+            className={`backgroundImage ${isDarkMode ? "come" : "gone"}`}
+            src={`${process.env.PUBLIC_URL}/summer-dark.jpeg`}
+            alt=""
+          />
+        </picture>
+      </BackgroundImageBox>
     </Wrappper>
   );
 };
@@ -116,18 +145,7 @@ const Wrappper = styled(motion.div)`
   align-items: center;
   position: fixed;
   box-shadow: 5px 0px 15px 5px rgba(0, 0, 0, 0.5);
-  ${(props) =>
-    props.isDarkMode
-      ? `
-          background: url("${process.env.PUBLIC_URL}/summer-dark.jpeg");
-        `
-      : `
-          background: url("${process.env.PUBLIC_URL}/summer.jpeg");
-        `};
-
-  background-position: center;
-  background-size: cover;
-  transition: width 0.5s ease, background 0.5s ease;
+  transition: width 0.5s ease;
 
   @media (max-width: 859px) {
     width: 100%;
@@ -171,7 +189,7 @@ const Content = styled.div`
   }
 `;
 
-const ToggleButtonBox = styled(motion.div)`
+const ToggleButtonBox = styled.div`
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -296,5 +314,27 @@ const Icon = styled(Link)`
   padding: 0.5rem;
   :hover {
     background-color: rgba(255, 255, 255, 0.3);
+  }
+`;
+
+const BackgroundImageBox = styled.div`
+  .backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .come {
+    opacity: 1;
+    z-index: -2;
+  }
+
+  .gone {
+    opacity: 0;
+    transition: opacity 0.5s ease;
   }
 `;
