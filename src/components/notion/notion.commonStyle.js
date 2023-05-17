@@ -13,6 +13,14 @@ export const NotionCommonStyles = styled.div`
     > div {
       overflow: hidden;
     }
+    :hover {
+      grid-template-rows: 1fr;
+    }
+
+    p {
+      padding-bottom: 0.5rem;
+      line-height: 1.5rem;
+    }
   }
 
   div.open {
@@ -23,6 +31,7 @@ export const NotionCommonStyles = styled.div`
     display: inline-block;
     width: fit-content;
     aspect-ratio: 1 / 1;
+    transition: transform 0.1s ease-in-out;
   }
 
   div.openedToggle {
@@ -846,5 +855,12 @@ export const NotionCommonStyles = styled.div`
   .link-image {
     width: 1.5rem;
     height: 1.5rem;
+  }
+
+  .about {
+    li {
+      padding-bottom: 0.5rem;
+      line-height: 1.5rem;
+    }
   }
 `;

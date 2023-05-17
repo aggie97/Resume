@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 const Resume = () => {
+  const [open, setOpen] = useState(false);
   return (
     <div>
       <header>
@@ -69,7 +72,54 @@ const Resume = () => {
           </figure>
         </div>
       </div>
+      <h1 style={{ margin: "1rem 0" }}>
+        <mark>Intro</mark>
+      </h1>
+      <ul className="about">
+        <li id="9c296626-9dce-433e-a46b-d0ee31347a63">
+          전자통신공학 재학 중 총 3번의 팀 프로젝트(강의2 | 캡스톤디자인1)에서
+          개발파트를 홀로 맡았고 강의는 A+, 캡스톤디자인은 동상으로 좋은 성적을
+          거두고 졸업 후 독학 및 부트 캠프를 거치면서 팀 프로젝트를 진행하며
+          프론트 엔드 역할로 웹 서비스를 개발 및 배포한 경험이 있습니다.
+        </li>
+        <li>
+          주변 사람들이 편한 환경에서 일하도록 만드는 것을 좋아합니다. 이를 위해
+          비개발파트인 팀원들을 위한 코드의 흐름을 주석으로 대신 보여주거나
+          적절한 변수 또는 함수명을 작성하여 알아보기 쉽게 하는 등 코드의
+          가독성을 높이는 역량을 쌓고자 노력해왔습니다.
+        </li>
+        <li>
+          소통이 최우선이라고 생각합니다. 여러 번의 프로젝트를 통해 팀원들간의
+          관계, 프로젝트의 마감기한 등의 문제에 직면했을 때 적극적이고 활발한
+          커뮤니케이션으로 해결했던 경험이 있습니다.
+        </li>
+      </ul>
 
+      <h2
+        style={{ cursor: "pointer" }}
+        onClick={() => setOpen((prev) => !prev)}
+      >
+        <div className={`toggleButton ${open ? "openedToggle" : ""}`}>▷</div>
+        Detail
+      </h2>
+      <div className={`detail ${open ? "open" : "close"}`}>
+        <div>
+          <p>
+            강의에서 아두이노와 라즈베리 파이를 통해 C와 Python의 기초를 익히게
+            되었고 다양한 센서들을 결합해 작품을 만드는 것을 시작으로
+            프로그래밍에 흥미를 가지기 시작했습니다.
+          </p>
+          <p>
+            작품들 중 대다수가 어플과 연동되어있었고 항상 UI가 아쉬웠던 것이
+            저에게 크게 다가왔습니다. 이를 계기로 졸업 직후부터 프론트 엔드
+            개발자가 되기 위한 공부를 시작했습니다. 생활코딩, 유데미 등 온라인
+            강의를 들으며 HTML, CSS, JavaScript, React를 공부했고 React의 기초
+            정도를 익힌 상태에서 새로운 기술과 협업 능력 그리고 개발자
+            네트워크에 참여할 기회를 얻기 위해 3개월 과정의 부트 캠프에 참여하게
+            되었습니다.
+          </p>
+        </div>
+      </div>
       <h1
         style={{ margin: "1rem 0" }}
         id="f90425a4-2915-47a3-aa55-24431a221221"
@@ -355,53 +405,7 @@ const Resume = () => {
           </ul>
         </div>
       </div>
-      {/* 
-      <h1 style={{ margin: "1rem 0" }}>
-        <mark>About</mark>
-      </h1>
-      <p id="c8b3477a-a782-4cdd-8d8d-7200389a5062">
-        안녕하세요. 1픽셀 어긋나는 것을 참지 못하는 사소한 이유로 개발을
-        시작했지만, 개발의 무궁무진함과 협업의 재미에 빠지게 되어 대학 졸업 후
-        부트 캠프를 수료하고 프론트 엔드 개발자가 되기 위한 여정을 걷고 있는
-        김민겸입니다.
-      </p>
-      <p id="9c296626-9dce-433e-a46b-d0ee31347a63">
-        React, Next.js, TypeScript, Emotion, GraphQL(Apollo-Client), Recoil을
-        사용하여 프로젝트를 진행하고, Google Cloud Platform과 AWS 그리고
-        Docker를 사용하여 배포해본 경험이 있습니다.
-      </p>
-      <p id="211fc6d8-0693-4469-a677-1a3da43336e0">
-        비효율적인 반복 작업을 개선하기 위해 공통 컴포넌트를 만드는 것을
-        좋아하며, 팀 단위의 효율적인 개발 환경에 대해 고민하곤 합니다.
-        <br /> 현재는 Rest API와 Redux에 관심을 가지고 독학하면서 JavaScript
-        심화 학습을 위해 수료생들과 책(모던 자바스크립트 딥 다이브)을 주제로
-        스터디를 진행하고 있습니다.
-      </p>
-      <h2
-        style={{ cursor: "pointer" }}
-        onClick={() => setOpen((prev) => !prev)}
-      >
-        <div className={`toggleButton ${open ? "openedToggle" : ""}`}>▷</div>
-        Detail
-      </h2>
-      <div className={`detail ${open ? "open" : "close"}`}>
-        <div>
-          <p>
-            저는 전자 및 통신을 전공했습니다. 강의에서 아두이노와 라즈베리
-            파이를 통해 C와 Python의 기초를 익히게 되었고 다양한 센서들을 결합해
-            작품을 만드는 것을 시작으로 프로그래밍에 흥미를 가지기 시작했습니다.
-          </p>
-          <p>
-            작품들 중 대다수가 어플과 연동되어있었고 항상 UI가 아쉬웠던 것이
-            저에게 크게 다가왔습니다. 이를 계기로 졸업 직후부터 프론트 엔드
-            개발자가 되기 위한 공부를 시작했습니다. 생활코딩, 유데미 등 온라인
-            강의를 들으며 HTML, CSS, JavaScript, React를 공부했고 React의 기초
-            정도를 익힌 상태에서 새로운 기술과 협업 능력 그리고 개발자
-            네트워크에 참여할 기회를 얻기 위해 3개월 과정의 부트 캠프에 참여하게
-            되었습니다.
-          </p>
-        </div>
-      </div> */}
+
       <h1 id="3eb2286e-0415-455e-91de-5ac2eaa9f554">
         <mark>Education</mark>
       </h1>
