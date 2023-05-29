@@ -21,6 +21,8 @@ export const NotionCommonStyles = styled.div`
       padding-bottom: 0.5rem;
       line-height: 1.5rem;
     }
+
+    will-change: grid-template-rows;
   }
 
   div.open {

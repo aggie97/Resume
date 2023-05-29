@@ -83,15 +83,18 @@ const Resume = () => {
           프론트 엔드 역할로 웹 서비스를 개발 및 배포한 경험이 있습니다.
         </li>
         <li>
-          주변 사람들이 편한 환경에서 일하도록 만드는 것을 좋아합니다. 이를 위해
-          비개발파트인 팀원들을 위한 코드의 흐름을 주석으로 대신 보여주거나
-          적절한 변수 또는 함수명을 작성하여 알아보기 쉽게 하는 등 코드의
-          가독성을 높이는 역량을 쌓고자 노력해왔습니다.
+          <h4>주변 사람들이 편한 환경에서 일하도록 만드는 것을 좋아합니다.</h4>
+          프로젝트가 시작되면 능동적으로 프로젝트 전반에 사용되는 핵심 공통
+          컴포넌트를 찾아 개발하려 하고 컴포넌트 사용 명세를 작성 후 공유하기도
+          합니다. 또한 비개발파트인 팀원들을 위한 코드의 흐름을 주석으로 대신
+          보여주거나 적절한 변수 또는 함수명을 작성하여 알아보기 쉽게 하는 등
+          코드의 가독성을 높이는 역량을 쌓고자 노력해왔습니다.
         </li>
         <li>
-          소통이 최우선이라고 생각합니다. 여러 번의 프로젝트를 통해 팀원들간의
-          관계, 프로젝트의 마감기한 등의 문제에 직면했을 때 적극적이고 활발한
-          커뮤니케이션으로 해결했던 경험이 있습니다.
+          <h4>소통이 최우선이라고 생각합니다.</h4>
+          재학 중엔 캡스톤 디자인과 졸업 후엔 부트캠프 팀 프로젝트를 통해
+          팀원들간의 관계, 프로젝트의 마감기한 등의 문제에 직면했을 때
+          적극적이고 활발한 커뮤니케이션으로 해결했던 경험이 있습니다.
         </li>
       </ul>
 
@@ -246,17 +249,6 @@ const Resume = () => {
             </figure>
           </div>
         </div>
-        <div>
-          <div style={{ width: "100%" }} className="column">
-            <figure
-              className="callout"
-              style={{ whiteSpace: "pre-wrap", display: "flex" }}
-              id="ec3a8e66-a8dc-46f7-8f7f-8d63d364ad7a"
-            >
-              <span>Docker</span>
-            </figure>
-          </div>
-        </div>
         <div id="41808c78-ceea-490f-b820-39224e4f56d4">
           <div
             id="d1e61219-b8e1-4c36-bb91-54b97f1bfb25"
@@ -299,28 +291,6 @@ const Resume = () => {
               id="ec3a8e66-a8dc-46f7-8f7f-8d63d364ad7a"
             >
               <span>Apollo-Client</span>
-            </figure>
-          </div>
-        </div>
-        <div>
-          <div style={{ width: "100%" }} className="column">
-            <figure
-              className="callout"
-              style={{ whiteSpace: "pre-wrap", display: "flex" }}
-              id="ec3a8e66-a8dc-46f7-8f7f-8d63d364ad7a"
-            >
-              <span>Amazon Web Service</span>
-            </figure>
-          </div>
-        </div>
-        <div>
-          <div style={{ width: "100%" }} className="column">
-            <figure
-              className="callout"
-              style={{ whiteSpace: "pre-wrap", display: "flex" }}
-              id="ec3a8e66-a8dc-46f7-8f7f-8d63d364ad7a"
-            >
-              <span>Google Cloud Platform</span>
             </figure>
           </div>
         </div>
@@ -381,8 +351,8 @@ const Resume = () => {
         <div>
           <ul>
             <li>전체 프로젝트 기여도 60%</li>
-            <li>AWS EC2 배포</li>
-            <li>GCP Docker 배포</li>
+            <li>AWS(EC2 + Route53) 배포</li>
+            <li>GCP(Compute Engine) Docker 배포</li>
             <li>Front Git 관리 (Commit-Convention, Code-Review) 주도</li>
             <li>반응형 웹 개발 주도</li>
             <li>디자이너와 소통 주도</li>
@@ -405,7 +375,6 @@ const Resume = () => {
           </ul>
         </div>
       </div>
-
       <h1 id="3eb2286e-0415-455e-91de-5ac2eaa9f554">
         <mark>Education</mark>
       </h1>
@@ -431,16 +400,10 @@ const Resume = () => {
                 <span className="selected-value">자바스크립트 스터디</span>
               </td>
               <td data-cell="내용" className="cell-Kfg">
-                모던 자바스크립트 딥 다이브 스터디
+                매주 진행되는 모던 자바스크립트 딥 다이브 스터디
               </td>
               <td data-cell="기관명" className="cell-PU">
-                <a
-                  rel="noreferrer"
-                  href="https://www.notion.so/fdabcb7beff744d0b4f05ce63aa7c1fe"
-                  target="_blank"
-                >
-                  스터디 노션
-                </a>
+                수료생 모임
               </td>
             </tr>
             <tr id="cf898cec-c204-459c-866e-2bbdcb94fb27">

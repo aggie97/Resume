@@ -20,7 +20,7 @@ const Portfolio = () => {
             근태관리 솔루션 Shiftee 클론 사이드 프로젝트
           </p>
           <figure id="1ed518b6-13f9-4528-a7f1-e1e5aa912f34">
-            <a href="https://github.com/Dev-One-Project/ONF-client" alt="">
+            <a href="https://github.com/aggie97/ONF-client" alt="">
               ONF Github Client Repo 링크
             </a>
           </figure>
