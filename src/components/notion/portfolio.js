@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import ImageDetailModal from "../ImageDetailModal";
+import { createPortal } from "react-dom";
 
 const Portfolio = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  console.log(isModalOpen);
   return (
     <div>
       <article id="ad1c5302-5a47-4abe-8b60-f6ab44c9b859" className="page sans">
@@ -161,7 +165,7 @@ const Portfolio = () => {
               </span>
             </div>
             <p style={{ width: "100%" }}>
-              프로젝트 전체 소개는
+              프로젝트 전체 소개는{" "}
               <a href="https://bit.ly/9_BUSKER">https://bit.ly/9_BUSKER</a>를
               참조해주시기 바랍니다.
             </p>
@@ -289,9 +293,8 @@ const Portfolio = () => {
             </li>
           </ul>
           <ul
-            style={{ display: "flex" }}
             id="b88c3050-d85c-484f-aa46-5c0212fa1bf9"
-            className="bulleted-list"
+            className="bulleted-list wire-frame"
           >
             <li style={{ listStyleType: "disc" }}>
               <strong>와이어프레임 제작</strong>
@@ -316,20 +319,42 @@ const Portfolio = () => {
               id="5f747e3e-c8e9-43a7-acf7-709ff1fdd927"
               style={{ flex: "1" }}
               className="image"
+              onClick={() => setIsModalOpen(true)}
             >
-              <a
-                href={`%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%20ad1c53025a474abe8b60f6ab44c9b859/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-01-16_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_11.54.57.png`}
-              >
-                <img
-                  style={{
-                    maxWidth: "40rem",
-                    width: "100%",
-                    paddingLeft: "1rem",
-                  }}
-                  src={`${process.env.PUBLIC_URL}/%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%20ad1c53025a474abe8b60f6ab44c9b859/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-01-16_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_11.54.57.png`}
-                  alt=""
-                />
-              </a>
+              {/* <a
+                href="https://whimsical.com/busker-RNydqiscsdKJCvXXKX8Wjy"
+                target="_blank"
+                rel="noreferrer"
+              > */}
+              <img
+                style={{
+                  width: "100%",
+                  paddingLeft: "1rem",
+                  cursor: "pointer",
+                }}
+                src={`${process.env.PUBLIC_URL}/wireFrame.png`}
+                alt="wire-frame"
+              />
+              {isModalOpen &&
+                createPortal(
+                  <ImageDetailModal
+                    onCloseModal={(event) => {
+                      event.stopPropagation();
+                      setIsModalOpen(false);
+                    }}
+                  >
+                    <img
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                      }}
+                      src={`${process.env.PUBLIC_URL}/wireFrame.png`}
+                      alt="wire-frame"
+                    />
+                  </ImageDetailModal>,
+                  document.querySelector("#root")
+                )}
+              {/* </a> */}
             </figure>
           </ul>
           <ul>

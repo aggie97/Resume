@@ -149,6 +149,7 @@ const Wrappper = styled(motion.div)`
 
   @media (max-width: 859px) {
     width: 100%;
+
     height: ${(props) => (props.isnavmode ? "5rem" : "100vh")};
     background: ${(props) =>
       props.isnavmode && (props.isDarkMode ? "#333" : "#bbb")};
@@ -264,6 +265,10 @@ const Intro = styled.div`
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
+  @media (max-width: 859px) {
+    justify-content: center;
+    gap: 15%;
+  }
 `;
 
 const LinkTo = styled.button`
@@ -336,5 +341,9 @@ const BackgroundImageBox = styled.div`
   .gone {
     opacity: 0;
     transition: opacity 0.5s ease;
+  }
+
+  @media (max-width: 859px) {
+    opacity: 0;
   }
 `;

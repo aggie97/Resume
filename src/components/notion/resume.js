@@ -97,7 +97,6 @@ const Resume = () => {
           적극적이고 활발한 커뮤니케이션으로 해결했던 경험이 있습니다.
         </li>
       </ul>
-
       <h2
         style={{ cursor: "pointer" }}
         onClick={() => setOpen((prev) => !prev)}
@@ -114,12 +113,12 @@ const Resume = () => {
           </p>
           <p>
             작품들 중 대다수가 어플과 연동되어있었고 항상 UI가 아쉬웠던 것이
-            저에게 크게 다가왔습니다. 이를 계기로 졸업 직후부터 프론트 엔드
-            개발자가 되기 위한 공부를 시작했습니다. 생활코딩, 유데미 등 온라인
-            강의를 들으며 HTML, CSS, JavaScript, React를 공부했고 React의 기초
-            정도를 익힌 상태에서 새로운 기술과 협업 능력 그리고 개발자
-            네트워크에 참여할 기회를 얻기 위해 3개월 과정의 부트 캠프에 참여하게
-            되었습니다.
+            저에게 크게 다가왔습니다. 이를 계기로 학사 과정이 끝난 직후부터
+            프론트 엔드 개발자가 되기 위한 공부를 시작했습니다. 생활코딩, 유데미
+            등 온라인 강의를 들으며 HTML, CSS, JavaScript, React를 공부했고
+            React의 기초 정도를 익힌 상태에서 새로운 기술과 협업 능력 그리고
+            개발자 네트워크에 참여할 기회를 얻기 위해 3개월 과정의 부트 캠프에
+            참여하게 되었습니다.
           </p>
         </div>
       </div>
@@ -363,7 +362,7 @@ const Resume = () => {
                 target="_blank"
                 style={{ display: "flex" }}
               >
-                와이어 프레임( Whimsical
+                와이어 프레임(Whimsical
                 <img
                   src={`${process.env.PUBLIC_URL}/link.png`}
                   alt="Github Client Repository"

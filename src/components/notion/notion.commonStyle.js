@@ -865,4 +865,11 @@ export const NotionCommonStyles = styled.div`
       line-height: 1.5rem;
     }
   }
+
+  .wire-frame {
+    display: flex;
+    @media (max-width: 859px) {
+      display: block;
+    }
+  }
 `;
