@@ -836,24 +836,6 @@ export const NotionCommonStyles = styled.div`
     background-color: rgba(211, 229, 239, 1);
   }
 
-  .checkbox {
-    display: inline-flex;
-    vertical-align: text-bottom;
-    width: 16;
-    height: 16;
-    background-size: 16px;
-    margin-left: 2px;
-    margin-right: 5px;
-  }
-
-  .checkbox-on {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-  }
-
-  .checkbox-off {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-  }
-
   .link-image {
     width: 1.5rem;
     height: 1.5rem;
@@ -871,5 +853,21 @@ export const NotionCommonStyles = styled.div`
     @media (max-width: 859px) {
       display: block;
     }
+  }
+
+  .common-components {
+    display: flex;
+    gap: 1rem;
+    @media (max-width: 859px) {
+      flex-direction: column;
+    }
+    padding-bottom: 1rem;
+  }
+
+  .select01,
+  .fallingModal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 `;

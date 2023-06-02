@@ -3,8 +3,7 @@ import ImageDetailModal from "../ImageDetailModal";
 import { createPortal } from "react-dom";
 
 const Portfolio = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  console.log(isModalOpen);
+  const [isModalOpen, setIsModalOpen] = useState([false, false, false]);
   return (
     <div>
       <article id="ad1c5302-5a47-4abe-8b60-f6ab44c9b859" className="page sans">
@@ -69,19 +68,11 @@ const Portfolio = () => {
             <strong>관리, 프로필 페이지</strong>
           </p>
           <ul
-            id="f5e3bb0f-8d22-485d-b555-71dc4b53f191"
-            className="bulleted-list"
-          >
-            <li style={{ listStyleType: "disc" }}>
-              GraphQL을 통해 각 탭에 fit한 data 요청
-            </li>
-          </ul>
-          <ul
             id="bd8775f1-8d67-4e3a-a046-b8b62a283e8c"
             className="bulleted-list"
           >
             <li style={{ listStyleType: "disc" }}>
-              카카오맵 API를 이용하여 위치 기반 데이터를 가공하여 전달 및 요청
+              카카오맵 API를 이용하여 위치 기반 데이터를 가공하여 표시 및 요청
             </li>
           </ul>
           <ul
@@ -93,42 +84,77 @@ const Portfolio = () => {
             </li>
           </ul>
           <ul
-            id="fdede19c-affb-4d31-81f3-740618937c88"
-            className="bulleted-list"
-          >
-            <li style={{ listStyleType: "disc" }}>
-              yup을 이용한 유효성 검증으로 유지 보수 개선
-            </li>
-          </ul>
-          <ul
             id="3504354d-a464-4d03-bb61-23727dd27a25"
             className="bulleted-list"
           >
             <li style={{ listStyleType: "disc" }}>
-              Container-Presenter 패턴에 Atomic 패턴을 섞어 유지 보수 개선
+              Container-Presenter 패턴에 Atomic 패턴을 섞어 폴더 구조 세분화,
+              관심사 분리, 코드 경량화 및 가독성 개선
             </li>
           </ul>
           <p id="d819b3a5-2572-4ea6-8bc0-76d8abc76bee">
-            <strong>핵심 공통 컴포넌트 설계 및 구현</strong>
+            <strong>
+              핵심 공통 컴포넌트 설계 및 구현 후 기능 명세 작성 및 공유
+            </strong>
           </p>
-          <ul
-            id="9c834b02-f217-4772-9520-4ced0ab47af5"
-            className="bulleted-list"
-          >
-            <li style={{ listStyleType: "disc" }}>
-              select01.tsx, fallingModal.tsx
-              <ul
-                id="bc52e3eb-9bc3-42c7-8ee8-4ce4a9b72dc6"
-                className="bulleted-list"
-              >
-                <figure id="84cd9317-7f7b-4673-a3ed-c3ecd679426c">
-                  <li style={{ listStyleType: "circle" }}>
-                    기능 명세 작성 및 공유
-                  </li>
-                </figure>
-              </ul>
-            </li>
-          </ul>
+          <div className="common-components">
+            <div className="select01">
+              <span>select01.tsx</span>
+              <img
+                src={`${process.env.PUBLIC_URL}/Select01.png`}
+                alt="selec01_image"
+                style={{ cursor: "pointer" }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsModalOpen([true, false, false]);
+                }}
+              />
+              {isModalOpen[0] &&
+                createPortal(
+                  <ImageDetailModal
+                    onCloseModal={(event) => {
+                      event.stopPropagation();
+                      setIsModalOpen([false, false, false]);
+                    }}
+                  >
+                    <img
+                      src={`${process.env.PUBLIC_URL}/Select01.png`}
+                      alt="selec01_image"
+                      style={{ width: "100%", height: "95vh" }}
+                    />
+                  </ImageDetailModal>,
+                  document.querySelector("#root")
+                )}
+            </div>
+            <div className="fallingModal">
+              <span>fallingModal.tsx</span>
+              <img
+                style={{ cursor: "pointer" }}
+                src={`${process.env.PUBLIC_URL}/FallingModal.png`}
+                alt="FallingModal_image"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsModalOpen([false, true, false]);
+                }}
+              />
+              {isModalOpen[1] &&
+                createPortal(
+                  <ImageDetailModal
+                    onCloseModal={(event) => {
+                      event.stopPropagation();
+                      setIsModalOpen([false, false, false]);
+                    }}
+                  >
+                    <img
+                      src={`${process.env.PUBLIC_URL}/FallingModal.png`}
+                      alt="fallingModal_image"
+                      style={{ width: "100%", height: "95vh" }}
+                    />
+                  </ImageDetailModal>,
+                  document.querySelector("#root")
+                )}
+            </div>
+          </div>
           <hr id="6108bd47-e6b8-4251-ab14-a8195fffb9e9" />
           <h2 id="4705c22c-66e4-409e-80cb-e75e84193953">
             <span style={{ borderBottom: "0.05em solid" }}>BUSKER</span> : Team
@@ -319,13 +345,8 @@ const Portfolio = () => {
               id="5f747e3e-c8e9-43a7-acf7-709ff1fdd927"
               style={{ flex: "1" }}
               className="image"
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => setIsModalOpen([false, false, true])}
             >
-              {/* <a
-                href="https://whimsical.com/busker-RNydqiscsdKJCvXXKX8Wjy"
-                target="_blank"
-                rel="noreferrer"
-              > */}
               <img
                 style={{
                   width: "100%",
@@ -335,12 +356,12 @@ const Portfolio = () => {
                 src={`${process.env.PUBLIC_URL}/wireFrame.png`}
                 alt="wire-frame"
               />
-              {isModalOpen &&
+              {isModalOpen[2] &&
                 createPortal(
                   <ImageDetailModal
                     onCloseModal={(event) => {
                       event.stopPropagation();
-                      setIsModalOpen(false);
+                      setIsModalOpen([false, false, false]);
                     }}
                   >
                     <img
@@ -354,7 +375,6 @@ const Portfolio = () => {
                   </ImageDetailModal>,
                   document.querySelector("#root")
                 )}
-              {/* </a> */}
             </figure>
           </ul>
           <ul>
@@ -438,7 +458,7 @@ const Portfolio = () => {
             className="bulleted-list"
           >
             <li style={{ listStyleType: "disc" }}>
-              daum-post-code를 이용하여 우편번호와 주소 검색
+              daum-post-code 주소 검색창 구현
             </li>
           </ul>
           <ul
@@ -446,8 +466,7 @@ const Portfolio = () => {
             className="bulleted-list"
           >
             <li style={{ listStyleType: "disc" }}>
-              최상단에서 아래로 스크롤 시, sticky 장바구니 목록
-              표시(Intersection-Observer)
+              스크롤에 따른 장바구니 가시화 구현(Intersection-Observer)
             </li>
           </ul>
           <h3>What I Learned</h3>
