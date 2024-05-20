@@ -400,6 +400,26 @@ const Resume = () => {
           <tbody>
             <tr id="0d65e669-3d3c-4a1a-a64b-ac1b711550c8">
               <td data-cell="기간" className="cell-title">
+                2023.06.27~2023.07.27
+              </td>
+              <td data-cell="교육명" className="cell-title">
+                <span className="selected-value">
+                  원티드 프리온보딩 프론트엔드 인턴쉽 6월
+                </span>
+              </td>
+              <td data-cell="내용" className="cell-Kfg">
+                ESLint-Prettier-Husky 자동화, ContextAPI와 Redux 기초, 실행
+                컨텍스트와 클로저의 개념 정리, 클린코드와 테스트코드 작성의
+                중요성, 횡단 관심사 분리, AWS와 github Action을 이용한 CI-CI
+                구축해보기 등을 학습. 5명의 프론트엔드 개발자들과 함께 기업
+                과제를 수행하며 코드 리뷰 진행
+              </td>
+              <td data-cell="기관명" className="cell-PU">
+                원티드
+              </td>
+            </tr>
+            <tr id="0d65e669-3d3c-4a1a-a64b-ac1b711550c8">
+              <td data-cell="기간" className="cell-title">
                 2023.03.12~2023.05.07
               </td>
               <td data-cell="교육명" className="cell-title">

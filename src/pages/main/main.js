@@ -151,7 +151,7 @@ export default Main;
 
 const Wrapper = styled(motion.div)`
   width: ${(props) => (props.isnavmode === "true" ? "300px" : "100%")};
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,7 +187,7 @@ const Content = styled.div`
 
   @media (max-width: 859px) {
     ${({ isnavmode }) =>
-      isnavmode &&
+      isnavmode === "true" &&
       css`
         width: 100%;
         max-width: 100%;
@@ -249,7 +249,7 @@ const Profile = styled.div`
     font-weight: 600;
     :hover {
       ${({ isnavmode }) =>
-        isnavmode
+        isnavmode === "true"
           ? css`
               cursor: pointer;
               text-decoration: underline;
@@ -308,7 +308,7 @@ const Footer = styled.div`
   width: 100%;
   @media (max-width: 859px) {
     ${({ isnavmode }) =>
-      isnavmode &&
+      isnavmode === "true" &&
       css`
         width: auto;
         * {
