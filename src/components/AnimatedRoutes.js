@@ -11,7 +11,10 @@ const AnimatedRoutes = () => {
 
   return (
     <AnimatePresence>
-      <Main isnavmode={isNavMode} setIsNavMode={setIsNavMode} />
+      <Main
+        isnavmode={isNavMode ? "true" : "false"}
+        setIsNavMode={setIsNavMode}
+      />
       <Routes location={location} key={location.pathname}>
         <Route path={"/"} element={<></>} />
         <Route

@@ -15,8 +15,10 @@ const DarkModeContext = createContext();
 
 function DarkModeProvider({ children }) {
   const isDarkMode = useState(
-    window.matchMedia &&
+    `${
+      window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
+    }`
   );
 
   return (

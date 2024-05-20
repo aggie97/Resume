@@ -27,7 +27,7 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
   };
 
   return (
-    <Wrapper isDarkMode={isDarkMode} isnavmode={isNavMode}>
+    <Wrapper isdarkmode={isDarkMode} isnavmode={isNavMode}>
       <Content isnavmode={isNavMode}>
         <Profile isnavmode={isNavMode}>
           <Intro isnavmode={isNavMode}>
@@ -138,7 +138,7 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
 export default Main;
 
 const Wrapper = styled(motion.div)`
-  width: ${(props) => (props.isnavmode ? "300px" : "100%")};
+  width: ${(props) => (props.isnavmode === "true" ? "300px" : "100%")};
   height: 100%;
   display: flex;
   justify-content: center;
@@ -150,9 +150,10 @@ const Wrapper = styled(motion.div)`
   @media (max-width: 859px) {
     width: 100%;
 
-    height: ${(props) => (props.isnavmode ? "5rem" : "100vh")};
+    height: ${(props) => (props.isnavmode === "true" ? "5rem" : "100vh")};
     background: ${(props) =>
-      props.isnavmode && (props.isDarkMode ? "#333" : "#bbb")};
+      props.isnavmode === "true" &&
+      (props.isdarkmode === "true" ? "#333" : "#bbb")};
     box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.5);
   }
 `;
@@ -255,7 +256,7 @@ const Profile = styled.div`
 const Intro = styled.div`
   text-align: center;
   margin: 0 auto;
-  font-size: ${(props) => (props.isnavmode ? "1.25rem" : "1.5rem")};
+  font-size: ${(props) => (props.isnavmode === "true" ? "1.25rem" : "1.5rem")};
   transition: font-size 0.5s ease-in-out;
   max-width: 13rem;
   border-radius: 30%;

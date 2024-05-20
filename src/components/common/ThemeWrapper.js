@@ -5,7 +5,7 @@ import { useDarkMode } from "../../App";
 const ThemeWrapper = ({ children }) => {
   const [isDarkMode] = useDarkMode();
 
-  return <Wrapper isDarkMode={isDarkMode}>{children}</Wrapper>;
+  return <Wrapper isdarkmode={isDarkMode}>{children}</Wrapper>;
 };
 
 export default ThemeWrapper;
@@ -14,28 +14,31 @@ const Wrapper = styled.div`
   display: flex;
 
   color: ${(props) =>
-    props.isDarkMode ? props.theme.darkModeColor : props.theme.lightModeColor};
+    props.isdarkmode === "true"
+      ? props.theme.darkModeColor
+      : props.theme.lightModeColor};
   background-color: ${(props) =>
-    props.isDarkMode
+    props.isdarkmode === "true"
       ? props.theme.darkModeBackgroundColor
       : props.theme.lightModeBackgroundColor};
   hr,
   mark::after {
     background-color: ${(props) =>
-      props.isDarkMode
+      props.isdarkmode === "true"
         ? props.theme.lightModeBackgroundColor
         : props.theme.darkModeBackgroundColor};
   }
 
   mark {
     color: ${(props) =>
-      props.isDarkMode
+      props.isdarkmode === "true"
         ? props.theme.darkModeColor
         : props.theme.lightModeColor};
   }
 
   thead {
-    background-color: ${(props) => (props.isDarkMode ? "#222" : "#ccc")};
+    background-color: ${(props) =>
+      props.isdarkmode === "true" ? "#222" : "#ccc"};
     th {
       font-weight: bold;
     }
@@ -44,7 +47,8 @@ const Wrapper = styled.div`
   tr:nth-of-type(2n),
   figure.callout,
   .exp_header {
-    background-color: ${(props) => (props.isDarkMode ? "#444" : "#eee")};
+    background-color: ${(props) =>
+      props.isdarkmode === "true" ? "#444" : "#eee"};
   }
 
   transition: all 0.5s ease;
