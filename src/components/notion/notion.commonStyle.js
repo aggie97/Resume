@@ -281,7 +281,7 @@ export const NotionCommonStyles = styled.div`
     word-break: keep-all;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1050px) {
     th {
       display: none;
     }
