@@ -27,7 +27,7 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
   };
 
   return (
-    <Wrappper isDarkMode={isDarkMode} isnavmode={isNavMode}>
+    <Wrapper isDarkMode={isDarkMode} isnavmode={isNavMode}>
       <Content isnavmode={isNavMode}>
         <Profile isnavmode={isNavMode}>
           <Intro isnavmode={isNavMode}>
@@ -131,13 +131,13 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
           />
         </picture>
       </BackgroundImageBox>
-    </Wrappper>
+    </Wrapper>
   );
 };
 
 export default Main;
 
-const Wrappper = styled(motion.div)`
+const Wrapper = styled(motion.div)`
   width: ${(props) => (props.isnavmode ? "300px" : "100%")};
   height: 100%;
   display: flex;
@@ -267,7 +267,10 @@ const Nav = styled.nav`
   justify-content: space-between;
   @media (max-width: 859px) {
     justify-content: center;
-    gap: 15%;
+    gap: 30px;
+  }
+  @media (max-width: 474px) {
+    gap: 15px;
   }
 `;
 
@@ -344,6 +347,7 @@ const BackgroundImageBox = styled.div`
   }
 
   @media (max-width: 859px) {
+    display: none;
     opacity: 0;
   }
 `;
