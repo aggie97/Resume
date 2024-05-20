@@ -111,6 +111,7 @@ export const NotionCommonStyles = styled.div`
   .exp_header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 1.25rem;
     font-weight: bold;
     padding: 0.5rem;
