@@ -408,11 +408,20 @@ const Resume = () => {
                 </span>
               </td>
               <td data-cell="내용" className="cell-Kfg">
-                ESLint-Prettier-Husky 자동화, ContextAPI와 Redux 기초, 실행
-                컨텍스트와 클로저의 개념 정리, 클린코드와 테스트코드 작성의
-                중요성, 횡단 관심사 분리, AWS와 github Action을 이용한 CI-CI
-                구축해보기 등을 학습. 5명의 프론트엔드 개발자들과 함께 기업
-                과제를 수행하며 코드 리뷰 진행
+                <p>
+                  ESLint-Prettier-Husky 자동화, ContextAPI와 Redux 기초, 실행
+                  컨텍스트와 클로저의 개념 정리, 클린코드와 테스트코드 작성의
+                  중요성, 횡단 관심사 분리, AWS와 github Action을 이용한 CI-CI
+                  구축해보기 등을 학습. 5명의 프론트엔드 개발자들과 함께{" "}
+                  <a
+                    href="https://github.com/aggie97/pre-onboarding-11th-1-5"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    기업 과제
+                  </a>
+                  를 수행하며 코드 리뷰 진행
+                </p>
               </td>
               <td data-cell="기관명" className="cell-PU">
                 원티드
