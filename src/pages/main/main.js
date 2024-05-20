@@ -23,7 +23,7 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
   }, [location.pathname, setIsNavMode]);
 
   const toggleDarkMode = () => {
-    toggleMode((prev) => !prev);
+    toggleMode((prev) => (prev === "true" ? "false" : "true"));
   };
 
   return (
@@ -88,44 +88,56 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
         </Footer>
       </Content>
       <ToggleButtonBox onClick={toggleDarkMode}>
-        {isDarkMode && (
+        {isDarkMode === "true" && (
           <img src={`${process.env.PUBLIC_URL}/moon.png`} alt="darkmode" />
         )}{" "}
-        {!isDarkMode && (
+        {isDarkMode === "false" && (
           <img src={`${process.env.PUBLIC_URL}/sun.png`} alt="lightmode" />
         )}
       </ToggleButtonBox>
       <BackgroundImageBox>
         <picture>
           <source
-            className={`backgroundImage ${isDarkMode ? "gone" : "come"}`}
+            className={`backgroundImage ${
+              isDarkMode === "true" ? "gone" : "come"
+            }`}
             srcSet={`${process.env.PUBLIC_URL}/summer.avif`}
             type="image/avif"
           />
           <source
-            className={`backgroundImage ${isDarkMode ? "gone" : "come"}`}
+            className={`backgroundImage ${
+              isDarkMode === "true" ? "gone" : "come"
+            }`}
             srcSet={`${process.env.PUBLIC_URL}/summer.webp`}
             type="image/webp"
           />
           <img
-            className={`backgroundImage ${isDarkMode ? "gone" : "come"}`}
+            className={`backgroundImage ${
+              isDarkMode === "true" ? "gone" : "come"
+            }`}
             src={`${process.env.PUBLIC_URL}/summer.jpeg`}
             alt=""
           />
         </picture>
         <picture>
           <source
-            className={`backgroundImage ${isDarkMode ? "come" : "gone"}`}
+            className={`backgroundImage ${
+              isDarkMode === "true" ? "come" : "gone"
+            }`}
             srcSet={`${process.env.PUBLIC_URL}/summer-dark.avif`}
             type="image/avif"
           />
           <source
-            className={`backgroundImage ${isDarkMode ? "come" : "gone"}`}
+            className={`backgroundImage ${
+              isDarkMode === "true" ? "come" : "gone"
+            }`}
             srcSet={`${process.env.PUBLIC_URL}/summer-dark.webp`}
             type="image/webp"
           />
           <img
-            className={`backgroundImage ${isDarkMode ? "come" : "gone"}`}
+            className={`backgroundImage ${
+              isDarkMode === "true" ? "come" : "gone"
+            }`}
             src={`${process.env.PUBLIC_URL}/summer-dark.jpeg`}
             alt=""
           />
