@@ -9,11 +9,15 @@ const AnimatedRoutes = () => {
   const location = useLocation();
   const [isNavMode, setIsNavMode] = useState(false);
 
+  const handleNavMode = React.useCallback(() => {
+    setIsNavMode(location.pathname !== "/");
+  }, [location]);
+
   return (
     <AnimatePresence>
       <Main
         isnavmode={isNavMode ? "true" : "false"}
-        setIsNavMode={setIsNavMode}
+        setIsNavMode={handleNavMode}
       />
       <Routes location={location} key={location.pathname}>
         <Route path={"/"} element={<></>} />

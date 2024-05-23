@@ -19,7 +19,7 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
   }, [navigator]);
 
   useEffect(() => {
-    setIsNavMode(() => location.pathname !== `/`);
+    setIsNavMode();
   }, [location.pathname, setIsNavMode]);
 
   const toggleDarkMode = () => {
@@ -95,6 +95,7 @@ const Main = ({ isnavmode: isNavMode, setIsNavMode }) => {
           <img src={`${process.env.PUBLIC_URL}/sun.png`} alt="lightmode" />
         )}
       </ToggleButtonBox>
+
       <BackgroundImageBox>
         <picture>
           <source
@@ -160,8 +161,8 @@ const Wrapper = styled(motion.div)`
   transition: width 0.5s ease;
 
   @media (max-width: 859px) {
-    width: 100%;
-
+    transition: none;
+    width: 100vw;
     height: ${(props) => (props.isnavmode === "true" ? "5rem" : "100vh")};
     background: ${(props) =>
       props.isnavmode === "true" &&
@@ -171,7 +172,6 @@ const Wrapper = styled(motion.div)`
 `;
 
 const Content = styled.div`
-  width: 20rem;
   max-width: 90%;
   display: flex;
   flex-direction: column;
@@ -310,10 +310,7 @@ const Footer = styled.div`
     ${({ isnavmode }) =>
       isnavmode === "true" &&
       css`
-        width: auto;
-        * {
-          display: none;
-        }
+        width: 0px;
       `}
   }
 `;
@@ -361,6 +358,5 @@ const BackgroundImageBox = styled.div`
 
   @media (max-width: 859px) {
     display: none;
-    opacity: 0;
   }
 `;
